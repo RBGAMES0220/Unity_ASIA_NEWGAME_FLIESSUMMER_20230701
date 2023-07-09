@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb; // Rigidbody2D組件
     private int jumpCount = 0; // 當前跳躍次數
     private bool isGrounded = false; // 玩家是否在地面上
+    private bool isDoubleJumping = false; // 玩家是否正在進行第二段跳躍
     private float movement = 0f; // 左右移動輸入
 
     // 初始化
@@ -28,11 +29,23 @@ public class PlayerController : MonoBehaviour
     {
         movement = Input.GetAxisRaw("Horizontal"); // 讀取左右移動輸入
 
-        if (Input.GetButtonDown("Jump") && (isGrounded || jumpCount < maxJumps))
+        if (Input.GetButtonDown("Jump"))
         {
-            jumpCount++;
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            anim.SetBool("jumping", true);
+            if (isGrounded)
+            {
+                jumpCount = 1;
+                isDoubleJumping = false;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                anim.SetBool("jumping", true);
+            }
+            else if (!isDoubleJumping && jumpCount < maxJumps)
+            {
+                jumpCount++;
+                isDoubleJumping = true;
+                rb.velocity = new Vector2(rb.velocity.x, 0f);
+                rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+                anim.SetBool("doubleJumping", true);
+            }
         }
     }
 
@@ -59,8 +72,17 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
+            isGrounded = true;
             jumpCount = 0;
-            
+            anim.SetBool("falling", false);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            isGrounded = false;
         }
     }
 
@@ -70,12 +92,11 @@ public class PlayerController : MonoBehaviour
 
         if (anim.GetBool("jumping"))
         {
-            if(rb.velocity.y < 0)
+            if (rb.velocity.y < 0)
             {
                 anim.SetBool("jumping", false);
                 anim.SetBool("falling", true);
             }
-
             else if (rb.velocity.y > 0)
             {
                 anim.SetBool("jumping", true);
@@ -86,10 +107,24 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("falling", false);
             anim.SetBool("idle", true);
-        }         
+        }
 
+        if (isDoubleJumping)
+        {
+            if (rb.velocity.y < 0)
+            {
+                anim.SetBool("doubleJumping", false);
+                anim.SetBool("falling", true);
+            }
+            else if (rb.velocity.y > 0)
+            {
+                anim.SetBool("doubleJumping", true);
+                anim.SetBool("falling", false);
+            }
+        }
     }
 }
+
 
 
 
