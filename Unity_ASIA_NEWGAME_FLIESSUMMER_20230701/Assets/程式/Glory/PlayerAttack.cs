@@ -8,7 +8,7 @@ public class PlayerAttack : MonoBehaviour
     public float time;
 
     private Animator anim;
-    private PolygonCollider2D collider2D;
+    private new PolygonCollider2D collider2D;
     // Start is called before the first frame update
     void Start()
     {
