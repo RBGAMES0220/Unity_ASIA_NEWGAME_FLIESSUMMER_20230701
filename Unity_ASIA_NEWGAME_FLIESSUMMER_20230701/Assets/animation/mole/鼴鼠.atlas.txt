@@ -1,0 +1,12 @@
+鼴鼠.png
+size:1057,738
+filter:Linear,Linear
+pma:true
+圖層 1
+bounds:2,2,783,734
+鼴鼠手臂
+bounds:622,572,163,409
+rotate:90
+鼴鼠背包
+bounds:570,37,485,502
+rotate:180
