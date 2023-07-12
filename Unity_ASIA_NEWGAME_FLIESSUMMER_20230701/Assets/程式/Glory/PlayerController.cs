@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 0f);
                 rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 anim.SetBool("doubleJumping", true);
+                
             }
         }
     }
@@ -106,6 +107,8 @@ public class PlayerController : MonoBehaviour
         else if (coll.IsTouchingLayers(ground))
         {
             anim.SetBool("falling", false);
+            anim.SetBool("jumping", false);
+            anim.SetBool("doubleJumping", false);
             anim.SetBool("idle", true);
         }
 
