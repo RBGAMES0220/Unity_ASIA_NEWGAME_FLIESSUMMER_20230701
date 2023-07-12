@@ -158,7 +158,7 @@ public class Enemy : MonoBehaviour
             animator.SetBool("isAttacking", false); // 停止攻擊動畫
             animator.SetBool("isChasing", true); // 開始追逐動畫
         }
-        else 
+        else
         {
             animator.SetBool("isAttacking", true);
             animator.SetBool("isChasing", false);
