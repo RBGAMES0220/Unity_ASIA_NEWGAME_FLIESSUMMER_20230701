@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public float detectionRadius = 5f; // 偵測半徑
     public float detectionInterval = 0.2f; // 偵測間隔
     public float attackDistance = 2f; // 攻擊距離
+    public int damageAmount = 10; // 敵人的攻擊力
+
     private Animator animator;
 
     private enum EnemyState
@@ -162,6 +164,13 @@ public class Enemy : MonoBehaviour
         {
             animator.SetBool("isAttacking", true);
             animator.SetBool("isChasing", false);
+
+            // 給予玩家傷害，你可以在這裡調用玩家的 TakeDamage 方法，傳遞傷害值作為參數
+            PlayerHealth player = target.GetComponent<PlayerHealth>();
+            if (player != null)
+            {
+                player.TakeDamage(damageAmount);
+            }
         }
     }
 
@@ -183,6 +192,7 @@ public class Enemy : MonoBehaviour
         transform.localScale = scale;
     }
 }
+
 
 
 
