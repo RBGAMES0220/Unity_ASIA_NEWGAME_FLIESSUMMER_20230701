@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Spine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,21 +12,25 @@ public class PlayerController : MonoBehaviour
     public Collider2D coll;
     public Animator anim;
     public LayerMask ground;
+    public float attackRange = 1f; // 玩家攻擊範圍
+    public int attackDamage = 10; // 玩家攻擊力
+    public LayerMask enemyLayer; // 敵人的圖層（用於碰撞檢測）
 
     private Rigidbody2D rb; // Rigidbody2D組件
     private int jumpCount = 0; // 當前跳躍次數
     private bool isGrounded = false; // 玩家是否在地面上
     private bool isDoubleJumping = false; // 玩家是否正在進行第二段跳躍
     private float movement = 0f; // 左右移動輸入
+    private bool isAttacking = false;
 
     // 初始化
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // 取得Rigidbody2D組件
     }
 
     // 獲取左右移動輸入和跳躍輸入
-    void Update()
+    private void Update()
     {
         movement = Input.GetAxisRaw("Horizontal"); // 讀取左右移動輸入
 
@@ -48,10 +53,17 @@ public class PlayerController : MonoBehaviour
                 
             }
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            // 攻擊按鈕的檢測
+            Attack();
+        }
+
     }
 
     // 玩家移動
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         rb.velocity = new Vector2(movement * moveSpeed * Time.deltaTime, rb.velocity.y);
 
@@ -69,7 +81,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // 重置跳躍次數
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
@@ -79,7 +91,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
@@ -87,7 +99,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SwitchAnim()
+    private void SwitchAnim()
     {
         anim.SetBool("idle", false);
 
@@ -126,7 +138,39 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    private void Attack()
+    {
+        // 在攻擊時進行碰撞檢測，檢測是否有敵人在攻擊範圍內
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
+
+        Debug.Log("Attack method is called!");
+
+        // 對檢測到的敵人進行攻擊
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            // 獲取敵人的腳本（如果有的話）並給予傷害
+            EnemyHealth enemyScript = enemy.GetComponent<EnemyHealth>();
+            if (enemyScript != null)
+            {
+                enemyScript.TakeDamage(attackDamage);
+            }
+        }
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            anim.SetBool("isAttacking", true);
+        }
+        else if (isAttacking) 
+        {
+            isAttacking = false;
+            anim.SetBool("idle", true);
+        }
+    }
+
+    
 }
+
 
 
 

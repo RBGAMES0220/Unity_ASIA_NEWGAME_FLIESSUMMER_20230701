@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 273369898}
   - component: {fileID: 273369905}
   - component: {fileID: 273369904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "Spine Mecanim GameObject (\u9AB8\u9AA8\u9CE5\u62C6\u5206)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3204,6 +3204,10 @@ PrefabInstance:
     - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: moveSpeed
       value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454510, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_Mass
