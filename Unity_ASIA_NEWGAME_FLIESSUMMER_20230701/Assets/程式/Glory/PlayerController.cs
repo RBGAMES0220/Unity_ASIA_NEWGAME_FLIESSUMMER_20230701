@@ -1,4 +1,5 @@
-﻿using Spine;
+﻿using Cinemachine;
+using Spine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -161,14 +162,17 @@ public class PlayerController : MonoBehaviour
             isAttacking = true;
             anim.SetBool("isAttacking", true);
         }
-        else if (isAttacking) 
-        {
-            isAttacking = false;
-            anim.SetBool("idle", true);
-        }
+
+        // 觸發屏幕震動效果
+        Camera.main.GetComponent<CameraShake>().Shake();
     }
 
-    
+    // 動畫事件：攻擊動畫結束時觸發
+    public void OnAttackAnimationEnd()
+    {
+        isAttacking = false;
+        anim.SetBool("isAttacking", false);
+    }
 }
 
 
