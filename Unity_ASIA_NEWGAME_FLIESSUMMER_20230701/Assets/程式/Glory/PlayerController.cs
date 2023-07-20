@@ -6,16 +6,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     public float moveSpeed = 5f; // 玩家移動速度
     public float jumpForce = 10f; // 跳躍力度
     public int maxJumps = 2; // 最大跳躍次數
     public Collider2D coll;
     public Animator anim;
     public LayerMask ground;
-    public float attackRange = 1f; // 玩家攻擊範圍
+    public Vector2 attackRangeScale = new Vector2(1f, 1f); // 玩家攻擊範圍的缩放
+    public Vector2 attackRangeOffset = new Vector2(1f, 0f); // 玩家攻擊範圍的位置偏移
     public int attackDamage = 10; // 玩家攻擊力
     public LayerMask enemyLayer; // 敵人的圖層（用於碰撞檢測）
+    public Color attackRangeGizmoColor = Color.red; // 攻擊範圍的Gizmo顏色
 
     private Rigidbody2D rb; // Rigidbody2D組件
     private int jumpCount = 0; // 當前跳躍次數
@@ -51,7 +52,6 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 0f);
                 rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 anim.SetBool("doubleJumping", true);
-                
             }
         }
 
@@ -60,10 +60,9 @@ public class PlayerController : MonoBehaviour
             // 攻擊按鈕的檢測
             Attack();
         }
-
     }
 
-    // 玩家移動
+    // 玩家移動和攻擊
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(movement * moveSpeed * Time.deltaTime, rb.velocity.y);
@@ -143,7 +142,9 @@ public class PlayerController : MonoBehaviour
     private void Attack()
     {
         // 在攻擊時進行碰撞檢測，檢測是否有敵人在攻擊範圍內
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
+        Vector2 facingDirection = (transform.localScale.x > 0) ? Vector2.right : Vector2.left;
+        Vector2 attackRangePosition = (Vector2)transform.position + new Vector2(attackRangeOffset.x * facingDirection.x, attackRangeOffset.y);
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackRangePosition, attackRangeScale, 0f, enemyLayer);
 
         Debug.Log("Attack method is called!");
 
@@ -173,7 +174,32 @@ public class PlayerController : MonoBehaviour
         isAttacking = false;
         anim.SetBool("isAttacking", false);
     }
+
+    // 绘制攻击范围的Gizmo
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = attackRangeGizmoColor;
+        Vector2 facingDirection = (transform.localScale.x > 0) ? Vector2.right : Vector2.left;
+        Vector2 attackRangePosition = (Vector2)transform.position + new Vector2(attackRangeOffset.x * facingDirection.x, attackRangeOffset.y);
+        Gizmos.DrawWireCube(attackRangePosition, attackRangeScale);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

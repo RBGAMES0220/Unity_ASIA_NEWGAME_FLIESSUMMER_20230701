@@ -851,6 +851,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthSlider: {fileID: 0}
+  animator: {fileID: 273369899}
+  destroyDelay: 2
 --- !u!1 &364903937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,8 +3209,32 @@ PrefabInstance:
       value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: attackRange
+      value: 5.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: enemyLayer.m_Bits
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: attackRangeScale.x
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: attackRangeScale.y
+      value: 1.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: attackRangeOffset.x
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: attackRangeOffset.y
+      value: 2.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: attackRangeOffsetRight.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454510, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_Mass

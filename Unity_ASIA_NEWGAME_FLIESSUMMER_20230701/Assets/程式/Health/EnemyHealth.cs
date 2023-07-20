@@ -7,6 +7,10 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth; // 當前生命值
 
     public Slider healthSlider; // 生命條Slider
+    public Animator animator; // 敵人的Animator
+
+    private bool isDead = false; // 是否死亡
+    public float destroyDelay = 2f; // 延遲銷毀的時間
 
     private void Start()
     {
@@ -21,11 +25,19 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        currentHealth -= damageAmount; // 扣除傷害值
+        if (isDead) return; // 如果已死亡，則不處理傷害
+
+        currentHealth -= damageAmount;
 
         if (healthSlider != null)
         {
             healthSlider.value = currentHealth; // 更新生命條的當前值
+        }
+
+        // 播放受傷動畫
+        if (animator != null)
+        {
+            animator.SetTrigger("Hurt");
         }
 
         if (currentHealth <= 0)
@@ -36,8 +48,22 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
+        isDead = true;
         // 敵人死亡的處理邏輯
         Debug.Log("Enemy died!");
-        // 可以在這裡添加更多的邏輯，例如刪除敵人、顯示掉落物品等等
+
+        // 播放死亡動畫
+        if (animator != null)
+        {
+            animator.SetTrigger("Die");
+        }
+
+        // 停止敵人的移動或攻擊行為
+        // 可以在這裡添加其他你想要的死亡後的行為，例如：
+        // - 禁用敵人的碰撞器和觸發器，防止玩家再次攻擊
+
+        // 延遲一段時間後銷毀敵人物件
+        Destroy(gameObject, destroyDelay);
     }
 }
+
