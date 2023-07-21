@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     public float detectionInterval = 0.2f; // 偵測間隔
     public float attackDistance = 2f; // 攻擊距離
     public int damageAmount = 10; // 敵人的攻擊力
+    public Vector2 attackRangeOffset = new Vector2(1f, 0f); // 攻擊範圍的位置偏移
+    public Vector2 detectionRangeOffset = new Vector2(1f, 0f); // 檢測玩家範圍的位置偏移
 
     private Animator animator;
 
@@ -191,7 +193,24 @@ public class Enemy : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        // 繪制攻擊範圍
+        Gizmos.color = Color.red;
+        Vector3 attackRangePosition = transform.position + new Vector3(attackDistance * ((isFacingRight) ? 1 : -1) * attackRangeOffset.x, attackRangeOffset.y, 0);
+        Gizmos.DrawWireSphere(attackRangePosition, attackDistance);
+
+        // 繪制檢測玩家的範圍
+        Gizmos.color = Color.blue;
+        Vector3 detectionRangePosition = transform.position + new Vector3(detectionRadius * detectionRangeOffset.x, detectionRangeOffset.y, 0);
+        Gizmos.DrawWireSphere(detectionRangePosition, detectionRadius);
+    }
+
 }
+
+
+
 
 
 

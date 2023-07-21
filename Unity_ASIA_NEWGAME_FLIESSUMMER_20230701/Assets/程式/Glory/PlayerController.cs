@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask enemyLayer; // 敵人的圖層（用於碰撞檢測）
     public Color attackRangeGizmoColor = Color.red; // 攻擊範圍的Gizmo顏色
 
+
     private Rigidbody2D rb; // Rigidbody2D組件
     private int jumpCount = 0; // 當前跳躍次數
     private bool isGrounded = false; // 玩家是否在地面上
@@ -165,6 +166,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // 觸發屏幕震動效果
+        Debug.Log("Shaking camera!");
         Camera.main.GetComponent<CameraShake>().Shake();
     }
 
