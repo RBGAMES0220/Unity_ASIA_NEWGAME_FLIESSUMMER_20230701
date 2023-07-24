@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
             jumpCount = 0;
             anim.SetBool("falling", false);
+            anim.SetBool("idle", true);
         }
     }
 
@@ -119,10 +120,18 @@ public class PlayerController : MonoBehaviour
         }
         else if (coll.IsTouchingLayers(ground))
         {
-            anim.SetBool("falling", false);
-            anim.SetBool("jumping", false);
-            anim.SetBool("doubleJumping", false);
-            anim.SetBool("idle", true);
+            if (rb.velocity.y < 0) // 下落時切換到下落動畫
+            {
+                anim.SetBool("falling", true);
+                anim.SetBool("doubleJumping", false);
+                anim.SetBool("idle", false);
+            }
+            else if (rb.velocity.y == 0) // 在地面上待機時切換到待機動畫
+            {
+                anim.SetBool("falling", false);
+                anim.SetBool("doubleJumping", false);
+                anim.SetBool("idle", true);
+            }
         }
 
         if (isDoubleJumping)
@@ -139,6 +148,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
 
     private void Attack()
     {
@@ -177,7 +187,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isAttacking", false);
     }
 
-    // 绘制攻击范围的Gizmo
+    // 绘制攻擊範圍的Gizmo
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = attackRangeGizmoColor;
