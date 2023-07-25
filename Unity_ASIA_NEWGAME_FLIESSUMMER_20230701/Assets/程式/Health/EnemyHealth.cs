@@ -12,9 +12,14 @@ public class EnemyHealth : MonoBehaviour
     private bool isDead = false; // 是否死亡
     private bool isTakingDamage = false; // 是否正在受到傷害
 
+    private Rigidbody2D rb; // 敵人的Rigidbody2D
+    private Enemy movementScript;
+
     private void Start()
     {
         currentHealth = maxHealth; // 初始化當前生命值為最大生命值
+        movementScript = GetComponent<Enemy>();
+        animator = GetComponent<Animator>();
 
         if (healthSlider != null)
         {
@@ -37,7 +42,7 @@ public class EnemyHealth : MonoBehaviour
         // 只有在敵人還活著的情況下，才觸發受傷動畫
         if (animator != null && !isTakingDamage && currentHealth > 0)
         {
-            animator.SetTrigger("hurt");
+            animator.SetTrigger("Hurt");
             isTakingDamage = true;
         }
 
@@ -62,11 +67,17 @@ public class EnemyHealth : MonoBehaviour
         // 銷毀敵人物件
         Destroy(gameObject, 2f); // 2秒後銷毀物件
 
-        // 停止敵人的移動或攻擊行為
+        // 停止敵人的移動
+        if (movementScript != null)
+        {
+            movementScript.enabled = false; // 停用敵人的移動腳本
+        }
 
-        
+
     }
 }
+
+
 
 
 

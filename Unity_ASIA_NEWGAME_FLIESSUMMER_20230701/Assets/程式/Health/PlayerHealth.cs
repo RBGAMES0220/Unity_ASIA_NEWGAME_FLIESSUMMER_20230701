@@ -29,12 +29,18 @@ public class PlayerHealth : MonoBehaviour
                 anim.SetTrigger("hurt");
             }
         }
+
+        // 如果生命值大於 0，將動畫設置回 idle 狀態
+        if (currentHealth > 0)
+        {
+            anim.SetBool("idle", true);
+        }
     }
 
     private void Die()
     {
         // 玩家死亡的處理邏輯
         Debug.Log("Player died!"); // 在控制台輸出死亡消息
-        // 可以在這裡添加更多的邏輯，例如顯示死亡畫面、重新開始遊戲等等
+       
     }
 }

@@ -196,11 +196,7 @@ public class PlayerController : MonoBehaviour
     // 傷害停止時播放待機動畫
     private void LateUpdate()
     {
-        if (!isAttacking && playerHealth.currentHealth > 0)
-        {
-            anim.ResetTrigger("hurt");
-            anim.SetBool("idle", true);
-        }
+        
     }
 
     // 繪制攻擊範圍的Gizmo

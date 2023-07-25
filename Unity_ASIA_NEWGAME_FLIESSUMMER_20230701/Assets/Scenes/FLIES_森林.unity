@@ -855,7 +855,6 @@ MonoBehaviour:
   currentHealth: 0
   healthSlider: {fileID: 0}
   animator: {fileID: 273369899}
-  destroyDelay: 2
 --- !u!61 &273369907
 BoxCollider2D:
   m_ObjectHideFlags: 0
