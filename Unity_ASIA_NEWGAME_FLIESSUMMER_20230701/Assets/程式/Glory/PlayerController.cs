@@ -25,11 +25,14 @@ public class PlayerController : MonoBehaviour
     private bool isDoubleJumping = false; // 玩家是否正在進行第二段跳躍
     private float movement = 0f; // 左右移動輸入
     private bool isAttacking = false;
+    private PlayerHealth playerHealth; // 玩家的PlayerHealth組件
 
     // 初始化
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // 取得Rigidbody2D組件
+        playerHealth = GetComponent<PlayerHealth>(); // 取得PlayerHealth組件
+        anim = GetComponent<Animator>(); // 取得Animator組件
     }
 
     // 獲取左右移動輸入和跳躍輸入
@@ -178,6 +181,9 @@ public class PlayerController : MonoBehaviour
         // 觸發屏幕震動效果
         Debug.Log("Shaking camera!");
         Camera.main.GetComponent<CameraShake>().Shake();
+
+        // 在攻擊時不播放受傷動畫
+        anim.ResetTrigger("hurt");
     }
 
     // 動畫事件：攻擊動畫結束時觸發
@@ -187,7 +193,17 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isAttacking", false);
     }
 
-    // 绘制攻擊範圍的Gizmo
+    // 傷害停止時播放待機動畫
+    private void LateUpdate()
+    {
+        if (!isAttacking && playerHealth.currentHealth > 0)
+        {
+            anim.ResetTrigger("hurt");
+            anim.SetBool("idle", true);
+        }
+    }
+
+    // 繪制攻擊範圍的Gizmo
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = attackRangeGizmoColor;

@@ -788,9 +788,9 @@ MonoBehaviour:
   threshold: 0.1
   detectionRadius: 10.77
   detectionInterval: 0.2
-  attackDistance: 1.4
+  attackDistance: 1.32
   damageAmount: 1
-  attackRangeOffset: {x: 0.93, y: 3.77}
+  attackRangeOffset: {x: 0.74, y: 4.07}
   detectionRangeOffset: {x: -0.07, y: 8.76}
 --- !u!61 &273369904
 BoxCollider2D:
@@ -3123,6 +3123,11 @@ CapsuleCollider2D:
   m_Offset: {x: -0.09011626, y: 2.2484417}
   m_Size: {x: 2.5532126, y: 4.5285807}
   m_Direction: 0
+--- !u!95 &1377527539 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2116513231743454498, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+  m_PrefabInstance: {fileID: 2116513232875699734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1488730057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,6 +3166,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1530696498031082262, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1377527539}
     - target: {fileID: 2116513231743454496, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_Mesh
       value: 

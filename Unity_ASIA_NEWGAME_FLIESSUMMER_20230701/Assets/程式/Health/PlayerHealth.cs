@@ -1,13 +1,16 @@
-﻿using UnityEngine;
+﻿using Spine;
+using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100; // 玩家的最大生命值
     public int currentHealth; // 玩家的當前生命值
+    public Animator anim; // 玩家的Animator組件
 
     private void Start()
     {
         currentHealth = maxHealth; // 將當前生命值初始化為最大生命值
+        anim = GetComponent<Animator>();
     }
 
     public void TakeDamage(int damageAmount)
@@ -17,6 +20,14 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die(); // 如果生命值小於等於0，則觸發死亡事件
+        }
+        else
+        {
+            // 在受傷時播放受傷動畫
+            if (anim != null)
+            {
+                anim.SetTrigger("hurt");
+            }
         }
     }
 
