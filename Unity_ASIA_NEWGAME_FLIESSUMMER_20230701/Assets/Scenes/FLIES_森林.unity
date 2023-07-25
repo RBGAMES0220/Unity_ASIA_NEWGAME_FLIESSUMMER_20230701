@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 44212114}
   - component: {fileID: 44212113}
   - component: {fileID: 44212116}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 87704923}
   - component: {fileID: 87704922}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468939510}
   - component: {fileID: 468939509}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1579,7 +1579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751372063}
   - component: {fileID: 751372062}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1624,7 +1624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 838052108}
   - component: {fileID: 838052107}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3119,8 +3119,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09011626, y: 2.2484417}
-  m_Size: {x: 2.5532126, y: 4.5285807}
+  m_Offset: {x: -0.09011626, y: 2.2335668}
+  m_Size: {x: 2.5532126, y: 4.5583305}
   m_Direction: 0
 --- !u!95 &1377527539 stripped
 Animator:
@@ -3236,6 +3236,10 @@ PrefabInstance:
     - target: {fileID: 2116513231743454500, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: jumpForce
+      value: 26.5
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_Enabled
