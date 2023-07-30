@@ -61,7 +61,7 @@ public class EnemyHealth : MonoBehaviour
         // 播放死亡動畫
         if (animator != null)
         {
-            animator.SetTrigger("Die");
+            animator.SetTrigger("die");
         }
 
         // 銷毀敵人物件
@@ -72,17 +72,10 @@ public class EnemyHealth : MonoBehaviour
         {
             movementScript.enabled = false; // 停用敵人的移動腳本
         }
-    }
 
-    // 受傷動畫結束時的回調函式
-    public void OnHurtAnimationEnd()
-    {
-        isTakingDamage = false; // 受傷動畫結束後重置為 false
-        animator.SetBool("isChasing", true);
+
     }
 }
-
-
 
 
 
