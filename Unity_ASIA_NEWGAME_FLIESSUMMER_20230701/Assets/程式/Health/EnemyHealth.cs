@@ -42,7 +42,7 @@ public class EnemyHealth : MonoBehaviour
         // 只有在敵人還活著的情況下，才觸發受傷動畫
         if (animator != null && !isTakingDamage && currentHealth > 0)
         {
-            animator.SetTrigger("Hurt");
+            animator.SetTrigger("Hurt"); 
             isTakingDamage = true;
         }
 
@@ -61,21 +61,27 @@ public class EnemyHealth : MonoBehaviour
         // 播放死亡動畫
         if (animator != null)
         {
-            animator.SetTrigger("die");
+            animator.SetTrigger("Die");
         }
 
         // 銷毀敵人物件
-        Destroy(gameObject, 2f); // 2秒後銷毀物件
+        Destroy(gameObject, 0.5f); // 0.5秒後銷毀物件
 
         // 停止敵人的移動
         if (movementScript != null)
         {
             movementScript.enabled = false; // 停用敵人的移動腳本
         }
+    }
 
-
+    // 受傷動畫結束時的回調函式
+    public void OnHurtAnimationEnd()
+    {
+        isTakingDamage = false; // 受傷動畫結束後重置為 false
+        animator.SetBool("isChasing", true);
     }
 }
+
 
 
 

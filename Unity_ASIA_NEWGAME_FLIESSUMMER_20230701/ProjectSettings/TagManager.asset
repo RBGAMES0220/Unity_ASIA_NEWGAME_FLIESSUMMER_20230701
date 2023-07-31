@@ -47,3 +47,6 @@ TagManager:
   - name: Frontground
     uniqueID: 681893187
     locked: 0
+  - name: GameObject
+    uniqueID: 2835409131
+    locked: 0
