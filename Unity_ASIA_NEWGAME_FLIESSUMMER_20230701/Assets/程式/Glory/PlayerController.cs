@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public int attackDamage = 10; // 玩家攻擊力
     public LayerMask enemyLayer; // 敵人的圖層（用於碰撞檢測）
     public Color attackRangeGizmoColor = Color.red; // 攻擊範圍的Gizmo顏色
-    public int integer = 0;
+
 
     private Rigidbody2D rb; // Rigidbody2D組件
     private int jumpCount = 0; // 當前跳躍次數
@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); // 取得Rigidbody2D組件
         playerHealth = GetComponent<PlayerHealth>(); // 取得PlayerHealth組件
         anim = GetComponent<Animator>(); // 取得Animator組件
-        integer = 50;
     }
 
     // 獲取左右移動輸入和跳躍輸入
@@ -109,18 +108,12 @@ public class PlayerController : MonoBehaviour
     {
         anim.SetBool("idle", false);
 
-        if (rb.velocity.y < 0 && !coll.IsTouchingLayers(ground))
-        {
-            anim.SetBool("falling", true);
-        }
-
         if (anim.GetBool("jumping"))
         {
             if (rb.velocity.y < 0)
             {
                 anim.SetBool("jumping", false);
                 anim.SetBool("falling", true);
-                
             }
             else if (rb.velocity.y > 0)
             {

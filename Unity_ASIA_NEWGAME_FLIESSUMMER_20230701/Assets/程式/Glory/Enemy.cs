@@ -18,34 +18,8 @@ public class Enemy : MonoBehaviour
     public int damageAmount = 10; // 敵人的攻擊力
     public Vector2 attackRangeOffset = new Vector2(1f, 0f); // 攻擊範圍的位置偏移
     public Vector2 detectionRangeOffset = new Vector2(1f, 0f); // 檢測玩家範圍的位置偏移
-    public AchievementManager achievementManager; // Reference to the AchievementManager script
-
-    // Rest of the enemy controller code...
-
-    public void Die()
-    {
-        // This method is called when the enemy is defeated/killed
-        if (!achievementManager.AchievementUnlocked("Enemy Slayer"))
-        {
-            // Call the AchievementUnlocked method of the AchievementManager script
-            // and pass the achievement name as "Enemy Slayer" to unlock the achievement.
-            achievementManager.AchievementUnlocked("Enemy Slayer");
-
-            // Set the enemySlayerAchieved flag to true in the Achievement object.
-            foreach (var achievement in achievementManager.achievements)
-            {
-                if (achievement.title == "Enemy Slayer")
-                {
-                    achievement.enemySlayerAchieved = true;
-                    break;
-                }
-            }
-        }
-    }
 
     private Animator animator;
-
-
 
     private enum EnemyState
     {
