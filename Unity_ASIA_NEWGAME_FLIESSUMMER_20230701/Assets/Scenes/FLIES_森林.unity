@@ -793,6 +793,7 @@ BoxCollider2D:
   m_Size: {x: 6.341919, y: 3.9050326}
   m_EdgeRadius: 0
 
+=======
 --- !u!1 &355322343
 >>>>>>> cf0c9f1743358c04052393013c80d2f4bd5d2710
 GameObject:
@@ -803,6 +804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
 
+=======
   - component: {fileID: 355322344}
   - component: {fileID: 355322345}
   m_Layer: 0
@@ -825,6 +827,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 
+=======
   m_GameObject: {fileID: 355322343}
   m_Enabled: 1
   m_Density: 1
