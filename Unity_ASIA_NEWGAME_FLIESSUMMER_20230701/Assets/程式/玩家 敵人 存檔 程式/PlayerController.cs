@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask enemyLayer; // 敵人的圖層（用於碰撞檢測）
     public Color attackRangeGizmoColor = Color.red; // 攻擊範圍的Gizmo顏色
     public int integer = 0;
+    public AudioSource attackSound; // 要播放的攻擊音效的AudioSource組件
+    public AudioSource moveSound; // 移動音效的AudioSource組件
 
     private Rigidbody2D rb; // Rigidbody2D組件
     private int jumpCount = 0; // 當前跳躍次數
@@ -83,6 +85,15 @@ public class PlayerController : MonoBehaviour
 
         anim.SetFloat("running", Mathf.Abs(movement));
         SwitchAnim();
+
+        if (movement != 0 && isGrounded && !isAttacking)
+        {
+            PlayMoveSound();
+        }
+        else
+        {
+            StopMoveSound();
+        }
     }
 
     // 重置跳躍次數
@@ -169,6 +180,10 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Attack method is called!");
 
+        // 在攻擊時播放音效
+        attackSound.Play();
+
+
         // 對檢測到的敵人進行攻擊
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -191,6 +206,21 @@ public class PlayerController : MonoBehaviour
 
         // 在攻擊時不播放受傷動畫
         anim.ResetTrigger("hurt");
+    }
+
+    // 移動音效的播放
+    private void PlayMoveSound()
+    {
+        if (!moveSound.isPlaying)
+        {
+            moveSound.Play();
+        }
+    }
+
+    // 停止移動音效的播放
+    private void StopMoveSound()
+    {
+        moveSound.Stop();
     }
 
     // 動畫事件：攻擊動畫結束時觸發

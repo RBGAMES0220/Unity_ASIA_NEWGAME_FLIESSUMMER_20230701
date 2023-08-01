@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
 
     public Slider healthSlider; // 生命條Slider
     public Animator anim; // 敵人的Animator
+    public AudioSource hurtSound; // 敵人受到傷害音效的AudioSource組件
 
     private bool isDead = false; // 是否死亡
     private bool isTakingDamage = false; // 是否正在受到傷害
@@ -42,7 +43,8 @@ public class EnemyHealth : MonoBehaviour
         // 只有在敵人還活著的情況下，才觸發受傷動畫
         if (anim != null && !isTakingDamage && currentHealth > 0)
         {
-            anim.SetTrigger("Hurt"); 
+            anim.SetTrigger("Hurt");
+            PlayHurtSound(); // 播放受傷音效
             isTakingDamage = true;
         }
 
@@ -71,6 +73,15 @@ public class EnemyHealth : MonoBehaviour
         if (movementScript != null)
         {
             movementScript.enabled = false; // 停用敵人的移動腳本
+        }
+    }
+
+    // 受傷音效的播放
+    private void PlayHurtSound()
+    {
+        if (hurtSound != null && !hurtSound.isPlaying)
+        {
+            hurtSound.Play();
         }
     }
 
