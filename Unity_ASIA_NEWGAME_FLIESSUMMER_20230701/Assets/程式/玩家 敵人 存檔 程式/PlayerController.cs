@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public int integer = 0;
     public AudioSource attackSound; // 要播放的攻擊音效的AudioSource組件
     public AudioSource moveSound; // 移動音效的AudioSource組件
+    public AudioSource jumpSound; // 要播放的跳躍音效的AudioSource組件
 
     private Rigidbody2D rb; // Rigidbody2D組件
     private int jumpCount = 0; // 當前跳躍次數
@@ -51,6 +52,12 @@ public class PlayerController : MonoBehaviour
                 isDoubleJumping = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 anim.SetBool("jumping", true);
+
+                // 播放跳躍音效
+                if (jumpSound != null)
+                {
+                    jumpSound.Play();
+                }
             }
             else if (!isDoubleJumping && jumpCount < maxJumps)
             {
@@ -59,6 +66,12 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 0f);
                 rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 anim.SetBool("doubleJumping", true);
+
+                // 播放跳躍音效
+                if (jumpSound != null)
+                {
+                    jumpSound.Play();
+                }
             }
         }
 
