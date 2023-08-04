@@ -42,7 +42,9 @@ namespace GLORY
         // 獲取左右移動輸入和跳躍輸入
         private void Update()
         {
-            OpenMyBag();    
+            OpenMyBag();
+
+            
 
             movement = Input.GetAxisRaw("Horizontal"); // 讀取左右移動輸入
 
