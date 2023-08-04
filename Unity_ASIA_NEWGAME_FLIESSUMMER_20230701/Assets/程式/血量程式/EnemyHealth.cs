@@ -1,97 +1,102 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealth : MonoBehaviour
+namespace GLORY
 {
-    public int maxHealth = 100; // 最大生命值
-    public int currentHealth; // 當前生命值
-
-    public Slider healthSlider; // 生命條Slider
-    public Animator anim; // 敵人的Animator
-    public AudioSource hurtSound; // 敵人受到傷害音效的AudioSource組件
-
-    private bool isDead = false; // 是否死亡
-    private bool isTakingDamage = false; // 是否正在受到傷害
-
-    private Rigidbody2D rb; // 敵人的Rigidbody2D
-    private Enemy movementScript;
-
-    private void Start()
+    public class EnemyHealth : MonoBehaviour
     {
-        currentHealth = maxHealth; // 初始化當前生命值為最大生命值
-        movementScript = GetComponent<Enemy>();
-        anim = GetComponent<Animator>();
+        public int maxHealth = 100; // 最大生命值
+        public int currentHealth; // 當前生命值
 
-        if (healthSlider != null)
+        public Slider healthSlider; // 生命條Slider
+        public Animator anim; // 敵人的Animator
+        public AudioSource hurtSound; // 敵人受到傷害音效的AudioSource組件
+
+        private bool isDead = false; // 是否死亡
+        private bool isTakingDamage = false; // 是否正在受到傷害
+
+        private Rigidbody2D rb; // 敵人的Rigidbody2D
+        private EnemyAI movementScript;
+
+        private void Start()
         {
-            healthSlider.maxValue = maxHealth; // 設定生命條的最大值
-            healthSlider.value = currentHealth; // 設定生命條的當前值
-        }
-    }
+            currentHealth = maxHealth; // 初始化當前生命值為最大生命值
+            movementScript = GetComponent<EnemyAI>();
+            anim = GetComponent<Animator>();
 
-    public void TakeDamage(int damageAmount)
-    {
-        if (isDead) return; // 如果已死亡，則不處理傷害
-
-        currentHealth -= damageAmount;
-
-        if (healthSlider != null)
-        {
-            healthSlider.value = currentHealth; // 更新生命條的當前值
-        }
-
-        // 只有在敵人還活著的情況下，才觸發受傷動畫
-        if (anim != null && !isTakingDamage && currentHealth > 0)
-        {
-            anim.SetTrigger("Hurt");
-            PlayHurtSound(); // 播放受傷音效
-            isTakingDamage = true;
+            if (healthSlider != null)
+            {
+                healthSlider.maxValue = maxHealth; // 設定生命條的最大值
+                healthSlider.value = currentHealth; // 設定生命條的當前值
+            }
         }
 
-        if (currentHealth <= 0)
+        public void TakeDamage(int damageAmount)
         {
-            Die(); // 生命值小於等於0時，敵人死亡
+            if (isDead) return; // 如果已死亡，則不處理傷害
+
+            currentHealth -= damageAmount;
+
+            if (healthSlider != null)
+            {
+                healthSlider.value = currentHealth; // 更新生命條的當前值
+            }
+
+            // 只有在敵人還活著的情況下，才觸發受傷動畫
+            if (anim != null && !isTakingDamage && currentHealth > 0)
+            {
+                anim.SetTrigger("Hurt");
+                PlayHurtSound(); // 播放受傷音效
+                isTakingDamage = true;
+            }
+
+            if (currentHealth <= 0)
+            {
+                Die(); // 生命值小於等於0時，敵人死亡
+            }
         }
-    }
 
-    private void Die()
-    {
-        isDead = true;
-        // 敵人死亡的處理邏輯
-        Debug.Log("Enemy died!");
-
-        // 播放死亡動畫
-        if (anim != null)
+        private void Die()
         {
-            anim.SetTrigger("Die");
+            isDead = true;
+            // 敵人死亡的處理邏輯
+            Debug.Log("Enemy died!");
+
+            // 播放死亡動畫
+            if (anim != null)
+            {
+                anim.SetTrigger("Die");
+            }
+
+            // 銷毀敵人物件
+            Destroy(gameObject, 0.5f); // 0.5秒後銷毀物件
+
+            // 停止敵人的移動
+            if (movementScript != null)
+            {
+                movementScript.enabled = false; // 停用敵人的移動腳本
+            }
         }
 
-        // 銷毀敵人物件
-        Destroy(gameObject, 0.5f); // 0.5秒後銷毀物件
-
-        // 停止敵人的移動
-        if (movementScript != null)
+        // 受傷音效的播放
+        private void PlayHurtSound()
         {
-            movementScript.enabled = false; // 停用敵人的移動腳本
+            if (hurtSound != null && !hurtSound.isPlaying)
+            {
+                hurtSound.Play();
+            }
         }
-    }
 
-    // 受傷音效的播放
-    private void PlayHurtSound()
-    {
-        if (hurtSound != null && !hurtSound.isPlaying)
+        // 受傷動畫結束時的回調函式
+        public void OnHurtAnimationEnd()
         {
-            hurtSound.Play();
+            isTakingDamage = false; // 受傷動畫結束後重置為 false
+            anim.SetBool("isChasing", true);
         }
-    }
-
-    // 受傷動畫結束時的回調函式
-    public void OnHurtAnimationEnd()
-    {
-        isTakingDamage = false; // 受傷動畫結束後重置為 false
-        anim.SetBool("isChasing", true);
     }
 }
+
+
 
 
 
