@@ -11,6 +11,8 @@ namespace GLORY
         public Slider healthSlider; // 生命條Slider
         public Animator anim; // 敵人的Animator
         public AudioSource hurtSound; // 敵人受到傷害音效的AudioSource組件
+        public GameObject[] dropItems; // 存放掉落物品的預製物件
+        
 
         private bool isDead = false; // 是否死亡
         private bool isTakingDamage = false; // 是否正在受到傷害
@@ -76,6 +78,15 @@ namespace GLORY
             {
                 movementScript.enabled = false; // 停用敵人的移動腳本
             }
+
+            if (dropItems.Length > 0)
+            {
+                int randomIndex = Random.Range(0, dropItems.Length); // 隨機選擇一個掉落物品
+                GameObject dropItem = dropItems[randomIndex];
+
+                Instantiate(dropItem, transform.position, Quaternion.identity);
+            }
+
         }
 
         // 受傷音效的播放
@@ -86,6 +97,7 @@ namespace GLORY
                 hurtSound.Play();
             }
         }
+
 
         // 受傷動畫結束時的回調函式
         public void OnHurtAnimationEnd()
