@@ -139,7 +139,7 @@ namespace GLORY
 
             if (rb.velocity.y < 0 && !coll.IsTouchingLayers(ground))
             {
-                anim.SetBool("falling", true);
+                //anim.SetBool("falling", true);
             }
 
             if (anim.GetBool("jumping"))
@@ -160,7 +160,7 @@ namespace GLORY
             {
                 if (rb.velocity.y < 0) // 下落時切換到下落動畫
                 {
-                    anim.SetBool("falling", true);
+                    //anim.SetBool("falling", true);
                     anim.SetBool("doubleJumping", false);
                     anim.SetBool("idle", false);
                 }
