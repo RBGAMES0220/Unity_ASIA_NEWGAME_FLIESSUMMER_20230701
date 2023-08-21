@@ -2187,8 +2187,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09011626, y: 2.2335668}
-  m_Size: {x: 2.5532126, y: 4.5583305}
+  m_Offset: {x: -0.09011626, y: 2.2529047}
+  m_Size: {x: 2.5532126, y: 4.5196548}
   m_Direction: 0
 --- !u!95 &1377527539 stripped
 Animator:
@@ -13402,7 +13402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871299915, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: orthographic size
-      value: 16.09
+      value: 11.37
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_RootOrder
@@ -13410,11 +13410,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.819925
+      value: -36.156246
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.508
+      value: -3.3454237
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13478,11 +13478,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679306, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.008228302
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679306, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5.2185755
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679307, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_Follow
@@ -13494,12 +13494,12 @@ PrefabInstance:
       objectReference: {fileID: 1132704567}
     - target: {fileID: 354798860040679307, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 16.09
+      value: 11.37
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679412, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 785591489}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
 --- !u!1001 &697198171662317602
