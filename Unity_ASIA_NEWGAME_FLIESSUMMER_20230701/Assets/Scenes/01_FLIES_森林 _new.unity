@@ -13263,6 +13263,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1077295560}
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: maxHealth
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 1268264494803239849, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_Size.y
       value: 3.792202
@@ -13410,11 +13414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -36.156246
+      value: -32.555
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3454237
+      value: -3.3308754
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13478,11 +13482,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679306, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.008228302
+      value: 0.008255005
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679306, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.2185755
+      value: -5.233124
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679307, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_Follow
