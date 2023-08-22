@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1496138903}
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 5836181076888221808, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -193,6 +201,10 @@ PrefabInstance:
     - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_Name
       value: "Spine Mecanim GameObject (1_\u7926\u5751_\u571F\u87F2) (4)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
@@ -265,6 +277,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1426193371}
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 5836181076888221808, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -329,6 +349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Spine Mecanim GameObject (1_\u7926\u5751_\u571F\u87F2) (5)"
       objectReference: {fileID: 0}
+    - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
 --- !u!1001 &350962785
@@ -338,6 +362,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 2078795716}
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 5836181076888221808, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -402,8 +434,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Spine Mecanim GameObject (1_\u7926\u5751_\u571F\u87F2) (1)"
       objectReference: {fileID: 0}
+    - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+--- !u!95 &357527180 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5836181076888221809, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+  m_PrefabInstance: {fileID: 1340721443}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &445620081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -705,6 +746,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &560097061 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5836181076888221809, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+  m_PrefabInstance: {fileID: 1428910693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &656426896
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,11 +918,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -58.65104
+      value: -62.458805
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.3872633
+      value: 5.39293
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.z
@@ -948,11 +994,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679306, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.792778
+      value: -4.421978
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679306, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.924736
+      value: 6.9190693
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679307, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_Follow
@@ -49815,6 +49861,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 357527180}
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 5836181076888221808, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -49879,8 +49933,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Spine Mecanim GameObject (1_\u7926\u5751_\u571F\u87F2)"
       objectReference: {fileID: 0}
+    - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+--- !u!95 &1426193371 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5836181076888221809, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+  m_PrefabInstance: {fileID: 266980620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1428910693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49888,6 +49951,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 560097061}
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 5836181076888221808, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -49952,6 +50023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Spine Mecanim GameObject (1_\u7926\u5751_\u571F\u87F2) (2)"
       objectReference: {fileID: 0}
+    - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
 --- !u!1001 &1439121054
@@ -49961,6 +50036,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1680289037}
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 5836181076888221808, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -50025,12 +50108,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Spine Mecanim GameObject (1_\u7926\u5751_\u571F\u87F2) (3)"
       objectReference: {fileID: 0}
+    - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
 --- !u!4 &1456123136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1620863943123096122, guid: d14f5c02871487249bb07e96105ad5c4, type: 3}
   m_PrefabInstance: {fileID: 445620081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1496138903 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5836181076888221809, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+  m_PrefabInstance: {fileID: 133396670}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1501764088
 PrefabInstance:
@@ -50111,6 +50203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spine Mecanim GameObject (root)
       objectReference: {fileID: 0}
+    - target: {fileID: 2116513231743454500, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: jumpSound
       value: 
@@ -50123,6 +50219,10 @@ PrefabInstance:
       propertyPath: attackSound
       value: 
       objectReference: {fileID: 1238010078}
+    - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454508, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: attackRangeOffset.x
       value: 1.27
@@ -50178,6 +50278,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1680289037 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5836181076888221809, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+  m_PrefabInstance: {fileID: 1439121054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1884265970 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1620863943123096117, guid: d14f5c02871487249bb07e96105ad5c4, type: 3}
+  m_PrefabInstance: {fileID: 445620081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1907791585 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5836181076888221809, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+  m_PrefabInstance: {fileID: 2071945833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2048690305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8081062233896264246, guid: fae083a84e8f8fb49b764ee68b66125f, type: 3}
@@ -50190,6 +50305,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1907791585}
+    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 5836181076888221808, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -50254,8 +50377,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Spine Mecanim GameObject (1_\u7926\u5751_\u571F\u87F2) (6)"
       objectReference: {fileID: 0}
+    - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+--- !u!95 &2078795716 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5836181076888221809, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
+  m_PrefabInstance: {fileID: 350962785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2091365279
 GameObject:
   m_ObjectHideFlags: 0
