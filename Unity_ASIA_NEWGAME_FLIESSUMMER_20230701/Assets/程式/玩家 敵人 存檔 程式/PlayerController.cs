@@ -21,6 +21,7 @@ namespace GLORY
         public AudioSource attackSound; // 要播放的攻擊音效的AudioSource組件
         public AudioSource moveSound; // 移動音效的AudioSource組件
         public AudioSource jumpSound; // 要播放的跳躍音效的AudioSource組件
+        public Animator cam_anim;
 
         private Rigidbody2D rb; // Rigidbody2D組件
         private int jumpCount = 0; // 當前跳躍次數
@@ -210,6 +211,8 @@ namespace GLORY
                 {
                     enemyScript.TakeDamage(attackDamage);
                 }
+
+                cam_anim.Play("cam_shake");
             }
             if (!isAttacking)
             {
@@ -217,9 +220,7 @@ namespace GLORY
                 anim.SetBool("isAttacking", true);
             }
 
-            // 觸發屏幕震動效果
-            Debug.Log("Shaking camera!");
-            Camera.main.GetComponent<CameraShake>().Shake();
+          
 
             // 在攻擊時不播放受傷動畫
             anim.ResetTrigger("hurt");

@@ -23,6 +23,7 @@ namespace GLORY
         private bool canAttack = true; // 是否可以進行攻擊
         private float attackTimer = 0f; // 攻擊計時器
 
+
         private Animator anim;
 
         private enum EnemyState

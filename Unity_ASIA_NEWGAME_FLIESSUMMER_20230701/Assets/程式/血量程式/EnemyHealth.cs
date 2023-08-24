@@ -12,7 +12,7 @@ namespace GLORY
         public Animator anim; // 敵人的Animator
         public AudioSource hurtSound; // 敵人受到傷害音效的AudioSource組件
         public GameObject[] dropItems; // 存放掉落物品的預製物件
-        
+        public Animator cam;
 
         private bool isDead = false; // 是否死亡
         private bool isTakingDamage = false; // 是否正在受到傷害
@@ -20,6 +20,7 @@ namespace GLORY
         private Rigidbody2D rb; // 敵人的Rigidbody2D
         private EnemyAI movementScript;
 
+        private AchievementManager achievementManager; // Reference to the AchievementManager script
         private void Start()
         {
             currentHealth = maxHealth; // 初始化當前生命值為最大生命值
@@ -31,10 +32,14 @@ namespace GLORY
                 healthSlider.maxValue = maxHealth; // 設定生命條的最大值
                 healthSlider.value = currentHealth; // 設定生命條的當前值
             }
+
+            achievementManager = FindObjectOfType<AchievementManager>();
         }
 
         public void TakeDamage(int damageAmount)
         {
+            cam.Play("cam_shake");
+
             if (isDead) return; // 如果已死亡，則不處理傷害
 
             currentHealth -= damageAmount;

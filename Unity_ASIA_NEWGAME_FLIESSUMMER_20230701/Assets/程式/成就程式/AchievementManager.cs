@@ -6,6 +6,7 @@ using UnityEngine;
 public class AchievementManager : MonoBehaviour
 {
     public List<Achievement> achievements;
+    public bool enemySlayerAchieved;
 
     public int integer;
     public float floting_point;
@@ -40,7 +41,7 @@ public class AchievementManager : MonoBehaviour
         achievements = new List<Achievement>();
         achievements.Add(new Achievement("Step By Step", "Set your integer to or over 100", (object o) => integer >= 100));
         achievements.Add(new Achievement("Not So Precise", "Set your floating point to or over 50", (object o) => floting_point >= 50F));
-        achievements.Add(new Achievement("First Step", "Reach an integer of 50 or more", (object o) => integer >= 50));
+        achievements.Add(new Achievement("Enemy Slayer", "Kill your first enemy", (object o) => enemySlayerAchieved));
 
     }
 
