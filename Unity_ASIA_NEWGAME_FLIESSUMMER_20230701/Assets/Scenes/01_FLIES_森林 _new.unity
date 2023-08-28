@@ -1098,42 +1098,6 @@ Transform:
   m_Father: {fileID: 1917770102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &718938935 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-  m_PrefabInstance: {fileID: 2104780552}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &718938946
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718938935}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.28918052, y: 0.7646656}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.1147456, y: 1.3907089}
-  m_EdgeRadius: 0
---- !u!95 &718938953 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5836181076888221809, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-  m_PrefabInstance: {fileID: 2104780552}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &733358304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2326384273180015774, guid: cc52c04c44412c54c83c171155eb3cab, type: 3}
@@ -13782,57 +13746,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1075659681}
     - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 718938953}
-    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1077295560}
-    - target: {fileID: 76006418508411274, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: maxHealth
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268264494803239849, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_Size.y
-      value: 3.792202
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268264494803239849, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_Offset.y
-      value: 1.8827753
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888221808, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888221808, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1459558165
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888221810, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: threshold
-      value: 2.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888221810, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: attackCooldown
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888221810, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: detectionRadius
-      value: 10.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888221810, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: attackRangeOffset.x
-      value: 1.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888221810, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: waypoints.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888221810, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: detectionRangeOffset.y
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 5836181076888221810, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -13848,10 +13764,6 @@ PrefabInstance:
     - target: {fileID: 5836181076888221814, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888221814, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5836181076888221814, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13897,33 +13809,9 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888222604, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_Constraints
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888222604, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_GravityScale
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_Name
-      value: "Spine Mecanim GameObject (1_\u7926\u5751_\u571F\u87F2) (1)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104801945003457978, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_Size.y
-      value: 3.792202
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104801945003457978, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.32341576
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104801945003457978, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
-      propertyPath: m_Offset.y
-      value: 1.8827751
+      value: "\u68EE\u6797\u571F\u87F2"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
@@ -13948,11 +13836,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.260534
+      value: -30.798883
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1556358
+      value: -1.1537704
       objectReference: {fileID: 0}
     - target: {fileID: 354798858871300020, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14024,11 +13912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679306, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.012365341
+      value: 0.012371063
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679306, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.8423634
+      value: -7.8442287
       objectReference: {fileID: 0}
     - target: {fileID: 354798860040679307, guid: b7c09dd1d9eaf1741a3cbf9947b0a781, type: 3}
       propertyPath: m_Follow
@@ -14248,7 +14136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454500, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_Name
-      value: Spine Mecanim GameObject (root)
+      value: "\u73A9\u5BB6"
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454500, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_Layer
@@ -14527,7 +14415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_Name
-      value: "Spine Mecanim GameObject (1_\u7926\u5751_\u571F\u87F2)"
+      value: "\u68EE\u6797\u571F\u87F2(1)"
       objectReference: {fileID: 0}
     - target: {fileID: 5836181076888222605, guid: fcd7a7bc48d67064385e907c56081c73, type: 3}
       propertyPath: m_Layer
@@ -14568,7 +14456,7 @@ PrefabInstance:
       objectReference: {fileID: 1077295560}
     - target: {fileID: 6177123488313535697, guid: a60ddc15c783bbc4badb5510e2e4a449, type: 3}
       propertyPath: m_Name
-      value: "Spine Mecanim GameObject (\u9AB8\u9AA8\u9CE5\u62C6\u5206)"
+      value: "\u9AB8\u9AA8\u9CE5"
       objectReference: {fileID: 0}
     - target: {fileID: 6177123488313535700, guid: a60ddc15c783bbc4badb5510e2e4a449, type: 3}
       propertyPath: m_SortingLayer
