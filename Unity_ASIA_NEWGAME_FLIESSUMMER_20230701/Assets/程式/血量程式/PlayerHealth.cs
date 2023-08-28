@@ -9,13 +9,15 @@ namespace GLORY
         public Animator anim; // 玩家的Animator組件
 
         private PlayerController playerController; // 玩家的PlayerController腳本
-        private bool isDead = false; // 是否死亡
+        public static bool isDead = false; // 是否死亡
 
         private void Start()
         {
             currentHealth = maxHealth; // 將當前生命值初始化為最大生命值
             anim = GetComponent<Animator>();
             playerController = GetComponent<PlayerController>(); // 取得玩家的PlayerController腳本
+
+            isDead = false;
         }
 
         public void TakeDamage(int damageAmount)
@@ -73,20 +75,20 @@ namespace GLORY
             }
 
             // 停止所有動畫：這裡假設你的動畫是由Animator組件控制的，如果是其他方式播放動畫，相應地進行停止處理
-            if (anim != null)
+            //if (anim != null)
             {
-                anim.enabled = false; // 停用Animator組件
+               // anim.enabled = false; // 停用Animator組件
             }
 
             // 停止與敵人的碰撞檢測：這裡假設你的碰撞檢測是由Collider2D組件控制的，如果是其他方式進行碰撞檢測，相應地進行停止處理
-            Collider2D collider = GetComponent<Collider2D>();
-            if (collider != null)
+            //Collider2D collider = GetComponent<Collider2D>();
+            //if (collider != null)
             {
-                collider.enabled = false; // 停用Collider2D組件
+                //collider.enabled = false; // 停用Collider2D組件
             }
 
             // 銷毀玩家物件：在完成所有處理後，最後銷毀玩家物件
-            Destroy(gameObject, 2f); // 0.5秒後銷毀物件
+            //Destroy(gameObject, 2f); // 0.5秒後銷毀物件
         }
     }
 }

@@ -135,6 +135,7 @@ namespace GLORY
 
         private void Attack()
         {
+            if (PlayerHealth.isDead) currentState = EnemyState.Patrol;
             // 檢查是否超出偵測範圍
             if (Vector3.Distance(transform.position, target.position) > detectionRadius)
             {
