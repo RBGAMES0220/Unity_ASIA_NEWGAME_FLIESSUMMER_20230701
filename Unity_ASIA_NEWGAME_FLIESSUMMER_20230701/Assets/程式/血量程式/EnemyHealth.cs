@@ -12,7 +12,7 @@ namespace GLORY
         public Animator anim; // 敵人的Animator
         public AudioSource hurtSound; // 敵人受到傷害音效的AudioSource組件
         public GameObject[] dropItems; // 存放掉落物品的預製物件
-        public Animator cam;
+        
 
         private bool isDead = false; // 是否死亡
         private bool isTakingDamage = false; // 是否正在受到傷害
@@ -38,7 +38,7 @@ namespace GLORY
 
         public void TakeDamage(int damageAmount)
         {
-            cam.Play("cam_shake");
+            CinemachineShake.Instance.ShakeCamera(5f, 0.1f);
 
             if (isDead) return; // 如果已死亡，則不處理傷害
 
@@ -55,6 +55,7 @@ namespace GLORY
                 anim.SetTrigger("Hurt");
                 PlayHurtSound(); // 播放受傷音效
                 isTakingDamage = true;
+                
             }
 
             if (currentHealth <= 0)
@@ -76,7 +77,7 @@ namespace GLORY
             }
 
             // 銷毀敵人物件
-            Destroy(gameObject, 0.5f); // 0.5秒後銷毀物件
+            Destroy(gameObject, 3f); // 3秒後銷毀物件
 
             // 停止敵人的移動
             if (movementScript != null)
