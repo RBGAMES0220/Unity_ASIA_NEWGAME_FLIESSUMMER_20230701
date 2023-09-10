@@ -11,6 +11,8 @@ namespace GLORY
         private PlayerController playerController; // 玩家的PlayerController腳本
         public static bool isDead = false; // 是否死亡
 
+        public AudioSource hurtAudioSource; // 受傷音效的AudioSource組件
+
         private void Start()
         {
             currentHealth = maxHealth; // 將當前生命值初始化為最大生命值
@@ -40,7 +42,13 @@ namespace GLORY
                 {
                     anim.SetTrigger("hurt");
                 }
+                // 在受傷時播放音效
+                if (hurtAudioSource != null)
+                {
+                    hurtAudioSource.Play();
+                }
             }
+
 
             // 如果生命值大於 0，將動畫設置回 idle 狀態
             if (currentHealth > 0)
