@@ -12,7 +12,8 @@ namespace GLORY
         public Animator anim; // 敵人的Animator
         public AudioSource hurtSound; // 敵人受到傷害音效的AudioSource組件
         public GameObject[] dropItems; // 存放掉落物品的預製物件
-        
+        public GameObject damageEffect;// 受傷特效的參考
+
 
         private bool isDead = false; // 是否死亡
         private bool isTakingDamage = false; // 是否正在受到傷害
@@ -61,6 +62,13 @@ namespace GLORY
             if (currentHealth <= 0)
             {
                 Die(); // 生命值小於等於0時，敵人死亡
+            }
+
+            // 啟動受傷特效
+            if (damageEffect != null)
+            {
+                GameObject effect = Instantiate(damageEffect, transform.position, Quaternion.identity);
+                //Destroy(effect, 1.0f); // 1.0秒後銷毀特效，你可以根據需要調整時間
             }
         }
 
