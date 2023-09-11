@@ -1,4 +1,5 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 namespace GLORY
@@ -9,5 +10,3 @@ namespace GLORY
         public List<Item> itemList = new List<Item>();
     }
 }
-
-

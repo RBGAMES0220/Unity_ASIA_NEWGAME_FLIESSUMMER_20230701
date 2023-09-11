@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GLORY
 {
-    public class itemOnWorld : MonoBehaviour
+    public class ItemOnWorld : MonoBehaviour
     {
         public Item thisItem;
         public Inventory playerInventory;
@@ -14,6 +14,7 @@ namespace GLORY
             {
                 AddNewItem();
                 Destroy(gameObject);
+
             }
         }
 
@@ -22,6 +23,7 @@ namespace GLORY
             if (!playerInventory.itemList.Contains(thisItem))
             {
                 playerInventory.itemList.Add(thisItem);
+                // InventoryManager.CreateNewItem(thisItem);
             }
             else
             {

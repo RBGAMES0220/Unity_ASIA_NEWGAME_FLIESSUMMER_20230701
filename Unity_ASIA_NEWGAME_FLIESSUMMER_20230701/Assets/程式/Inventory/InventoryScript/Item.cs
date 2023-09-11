@@ -14,4 +14,3 @@ namespace GLORY
         public bool equip;
     }
 }
-
