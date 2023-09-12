@@ -14,7 +14,6 @@ namespace GLORY
             {
                 AddNewItem();
                 Destroy(gameObject);
-
             }
         }
 
@@ -29,6 +28,9 @@ namespace GLORY
             {
                 thisItem.itemHeld += 1;
             }
+
+            // Call a method in InventoryManager to refresh items here.
+            InventoryManager.RefreshItem(); // Assuming you have a RefreshItem method.
         }
     }
 }
