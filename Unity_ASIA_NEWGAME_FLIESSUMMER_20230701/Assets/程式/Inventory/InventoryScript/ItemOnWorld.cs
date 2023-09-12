@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace GLORY
 {
@@ -21,16 +23,31 @@ namespace GLORY
         {
             if (!playerInventory.itemList.Contains(thisItem))
             {
-                playerInventory.itemList.Add(thisItem);
+                // playerInventory.itemList.Add(thisItem);
                 // InventoryManager.CreateNewItem(thisItem);
-            }
+                for (int i = 0; i < playerInventory.itemList.Count; i++)
+                {
+                  if (playerInventory.itemList[i] == null)
+                    {
+                        playerInventory.itemList[i] = thisItem;
+                        break;
+                    }
+                }
+                
+                   
+                     
+                    
+                 
+             }
+                 
+            
             else
             {
                 thisItem.itemHeld += 1;
             }
 
-            // Call a method in InventoryManager to refresh items here.
-            InventoryManager.RefreshItem(); // Assuming you have a RefreshItem method.
+           
+            InventoryManager.RefreshItem(); 
         }
     }
 }
