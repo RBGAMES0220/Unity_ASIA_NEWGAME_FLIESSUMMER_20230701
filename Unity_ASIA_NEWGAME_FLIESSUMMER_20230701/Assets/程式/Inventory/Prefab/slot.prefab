@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4466668886197587253}
   - component: {fileID: 4092213664550588802}
   - component: {fileID: 5301784643134432315}
+  - component: {fileID: 4043578157356977995}
+  - component: {fileID: 8619225078367818329}
   m_Layer: 5
   m_Name: item
   m_TagString: Untagged
@@ -104,6 +106,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!225 &4043578157356977995
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990443343533915977}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &8619225078367818329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990443343533915977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d378b9070bebb439dc028ba8c8dbfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originaParent: {fileID: 0}
 --- !u!1 &4167266961463241937
 GameObject:
   m_ObjectHideFlags: 0
