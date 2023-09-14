@@ -21,7 +21,9 @@ namespace GLORY
         public AudioSource attackSound; // 要播放的攻擊音效的AudioSource組件
         public AudioSource moveSound; // 移動音效的AudioSource組件
         public AudioSource jumpSound; // 要播放的跳躍音效的AudioSource組件
-        
+        public GameObject attackEffect; // 攻擊特效的引用
+        public Vector3 attackEffectOffset = new Vector3(0f, 1f, 0f); // 上升偏移量
+
 
         private Rigidbody2D rb; // Rigidbody2D組件
         private int jumpCount = 0; // 當前跳躍次數
@@ -225,6 +227,16 @@ namespace GLORY
 
             // 在攻擊時不播放受傷動畫
             anim.ResetTrigger("hurt");
+
+            // 計算生成位置，包括上升偏移量
+            Vector3 spawnPosition = transform.position + attackEffectOffset;
+
+            // 啟動攻擊特效
+            if (attackEffect != null)
+            {
+                GameObject effect = Instantiate(attackEffect, spawnPosition, Quaternion.identity);
+                Destroy(effect, 1.0f); // 1.0秒後銷毀特效，你可以根據需要調整時間
+            }
         }
 
         // 移動音效的播放
