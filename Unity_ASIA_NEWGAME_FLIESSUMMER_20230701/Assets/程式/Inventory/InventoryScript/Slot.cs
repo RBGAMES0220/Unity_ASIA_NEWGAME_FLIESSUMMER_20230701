@@ -8,6 +8,7 @@ namespace GLORY
 {
     public class Slot : MonoBehaviour
     {
+        public int slotID;
         public Item slotItem;
         public Image slotImage;
         public Text slotNum;

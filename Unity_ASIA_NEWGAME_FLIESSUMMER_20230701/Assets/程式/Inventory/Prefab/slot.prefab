@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originaParent: {fileID: 0}
+  maBag: {fileID: 11400000, guid: 56c61fa2605b9504bb1b4f8f4c3215f0, type: 2}
 --- !u!1 &4167266961463241937
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae618b1c86990b54da8f647bffaf8487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotID: 0
   slotItem: {fileID: 0}
   slotImage: {fileID: 344534216633454107}
   slotNum: {fileID: 6934569655789954904}

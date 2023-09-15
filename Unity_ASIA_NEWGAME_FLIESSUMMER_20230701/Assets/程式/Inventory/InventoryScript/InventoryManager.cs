@@ -65,6 +65,7 @@ namespace GLORY
                 //CreateNewItem(instance.myBag.itemList[i]);
                 instance.slots.Add(Instantiate(instance.emptySlot));
                 instance.slots[i].transform.SetParent(instance.slotGrid.transform);
+                instance.slots[i].GetComponent<Slot>().slotID = i;
                 instance.slots[i].GetComponent<Slot>().SetupSlot(instance.myBag.itemList[i]);
             }
 
