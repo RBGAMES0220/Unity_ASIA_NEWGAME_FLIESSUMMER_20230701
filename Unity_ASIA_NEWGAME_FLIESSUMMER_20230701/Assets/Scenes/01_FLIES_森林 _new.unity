@@ -218,7 +218,6 @@ GameObject:
   - component: {fileID: 22444559}
   - component: {fileID: 22444561}
   - component: {fileID: 22444560}
-  - component: {fileID: 22444562}
   - component: {fileID: 22444563}
   m_Layer: 5
   m_Name: "\u80CC\u5305"
@@ -288,23 +287,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22444558}
   m_CullTransparentMesh: 1
---- !u!114 &22444562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22444558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad1cdd1954adc82488ac9f2538ed90f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myBag: {fileID: 11400000, guid: 56c61fa2605b9504bb1b4f8f4c3215f0, type: 2}
-  slotGrid: {fileID: 579133616}
-  emptySlot: {fileID: 7359998286054159832, guid: 11531a0109ed4f748ad759fbc7e9f09b, type: 3}
-  itemInformation: {fileID: 1058716189}
-  slots: []
 --- !u!114 &22444563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,7 +682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.154156, y: -1.1592455, z: -10}
+  m_LocalPosition: {x: -26.60755, y: -1.1371555, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1546,7 +1528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077495997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.141792, y: -8.997999, z: -10}
+  m_LocalPosition: {x: -26.724178, y: -8.997999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2135,6 +2117,7 @@ GameObject:
   - component: {fileID: 1323288764}
   - component: {fileID: 1323288763}
   - component: {fileID: 1323288762}
+  - component: {fileID: 1323288766}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2224,6 +2207,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1323288766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323288761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1cdd1954adc82488ac9f2538ed90f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myBag: {fileID: 11400000, guid: 56c61fa2605b9504bb1b4f8f4c3215f0, type: 2}
+  slotGrid: {fileID: 579133616}
+  emptySlot: {fileID: 7359998286054159832, guid: 11531a0109ed4f748ad759fbc7e9f09b, type: 3}
+  itemInformation: {fileID: 1058716189}
+  slots: []
 --- !u!1 &1346146103
 GameObject:
   m_ObjectHideFlags: 0

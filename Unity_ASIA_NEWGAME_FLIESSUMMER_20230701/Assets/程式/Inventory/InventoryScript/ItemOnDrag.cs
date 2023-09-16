@@ -23,38 +23,53 @@ public class ItemOnDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = eventData.position;
-        Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
+        //Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if(eventData.pointerCurrentRaycast.gameObject.name == "item Image")
+        if (eventData.pointerCurrentRaycast.gameObject != null)
         {
-            transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent);
-            transform.position = eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.position;
 
-            var temp = maBag.itemList[currentItemID];
-            maBag.itemList[currentItemID] = maBag.itemList[eventData.pointerCurrentRaycast.gameObject.GetComponentInParent<Slot>().slotID];
-            maBag.itemList[eventData.pointerCurrentRaycast.gameObject.GetComponentInParent<Slot>().slotID] = temp;
+            if (eventData.pointerCurrentRaycast.gameObject.name == "item Image")
+            {
+                transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent);
+                transform.position = eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.position;
+
+                var temp = maBag.itemList[currentItemID];
+                maBag.itemList[currentItemID] = maBag.itemList[eventData.pointerCurrentRaycast.gameObject.GetComponentInParent<Slot>().slotID];
+                maBag.itemList[eventData.pointerCurrentRaycast.gameObject.GetComponentInParent<Slot>().slotID] = temp;
 
 
 
 
-            eventData.pointerCurrentRaycast.gameObject.transform.parent.position = originaParent.position;
-            eventData.pointerCurrentRaycast.gameObject.transform.parent.SetParent(originaParent);
-            GetComponent<CanvasGroup>().blocksRaycasts = true;
-            return;
+                eventData.pointerCurrentRaycast.gameObject.transform.parent.position = originaParent.position;
+                eventData.pointerCurrentRaycast.gameObject.transform.parent.SetParent(originaParent);
+                GetComponent<CanvasGroup>().blocksRaycasts = true;
+                return;
+            }
+
+            if (eventData.pointerCurrentRaycast.gameObject.name == "slot(Clone)")
+            {
+
+                transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform);
+                transform.position = eventData.pointerCurrentRaycast.gameObject.transform.position;
+
+                maBag.itemList[eventData.pointerCurrentRaycast.gameObject.GetComponentInParent<Slot>().slotID] = maBag.itemList[currentItemID];
+                if (eventData.pointerCurrentRaycast.gameObject.GetComponent<Slot>().slotID != currentItemID)
+                    maBag.itemList[currentItemID] = null;
+
+
+                GetComponent<CanvasGroup>().blocksRaycasts = true;
+                return;
+            }
         }
-        transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform);
-        transform.position = eventData.pointerCurrentRaycast.gameObject.transform.position;
 
-        maBag.itemList[eventData.pointerCurrentRaycast.gameObject.GetComponentInParent<Slot>().slotID] = maBag.itemList[currentItemID];
-        maBag.itemList[currentItemID] = null;
-
-
+        transform.SetParent(originaParent);
+        transform.position = originaParent.position;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
-    }
 
+    }
   
 }
 
