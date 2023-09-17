@@ -68,7 +68,7 @@ namespace GLORY
             if (damageEffect != null)
             {
                 GameObject effect = Instantiate(damageEffect, transform.position, Quaternion.identity);
-                //Destroy(effect, 1.0f); // 1.0秒後銷毀特效，你可以根據需要調整時間
+                Destroy(effect, 1.0f); // 1.0秒後銷毀特效，你可以根據需要調整時間
             }
         }
 

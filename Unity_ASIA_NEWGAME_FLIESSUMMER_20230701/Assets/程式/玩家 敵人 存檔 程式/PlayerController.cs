@@ -25,6 +25,7 @@ namespace GLORY
         public Vector3 attackEffectOffset = new Vector3(0f, 1f, 0f); // 上升偏移量
 
 
+
         private Rigidbody2D rb; // Rigidbody2D組件
         private int jumpCount = 0; // 當前跳躍次數
         private bool isGrounded = false; // 玩家是否在地面上
@@ -228,13 +229,17 @@ namespace GLORY
             // 在攻擊時不播放受傷動畫
             anim.ResetTrigger("hurt");
 
-            // 計算生成位置，包括上升偏移量
-            Vector3 spawnPosition = transform.position + attackEffectOffset;
+            // 計算生成位置，包括上升偏移量和面朝方向
+            Vector3 spawnOffset = new Vector3((transform.localScale.x > 0) ? attackEffectOffset.x : -attackEffectOffset.x, attackEffectOffset.y, attackEffectOffset.z);
+            Vector3 spawnPosition = transform.position + spawnOffset;
+
+            // 計算生成特效時的旋轉，根據面朝方向決定
+            Quaternion spawnRotation = (transform.localScale.x > 0) ? Quaternion.identity : Quaternion.Euler(0, 180, 0);
 
             // 啟動攻擊特效
             if (attackEffect != null)
             {
-                GameObject effect = Instantiate(attackEffect, spawnPosition, Quaternion.identity);
+                GameObject effect = Instantiate(attackEffect, spawnPosition, spawnRotation);
                 Destroy(effect, 1.0f); // 1.0秒後銷毀特效，你可以根據需要調整時間
             }
         }
