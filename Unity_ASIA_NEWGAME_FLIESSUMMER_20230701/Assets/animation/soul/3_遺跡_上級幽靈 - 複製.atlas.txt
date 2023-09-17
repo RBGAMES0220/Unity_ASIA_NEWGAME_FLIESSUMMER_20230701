@@ -1,0 +1,39 @@
+3_遺跡_上級幽靈 - 複製.png
+size:943,225
+filter:Linear,Linear
+pma:true
+3_遺跡_上級幽靈 Copy
+bounds:524,2,223,221
+offsets:0,113,223,335
+3_遺跡_上級幽靈 Copy 3
+bounds:258,32,281,191
+offsets:0,0,281,194
+rotate:180
+3_遺跡_上級幽靈 Copy 4
+bounds:298,4,43,44
+offsets:1,1,45,46
+3_遺跡_上級幽靈 Copy 5
+bounds:377,8,35,38
+offsets:1,1,37,39
+3_遺跡_上級幽靈 Copy 6
+bounds:2,185,37,38
+offsets:1,1,38,40
+3_遺跡_上級幽靈 Copy 7
+bounds:2,43,37,57
+offsets:3,6,42,70
+3_遺跡_下級幽靈 Copy
+bounds:719,8,222,215
+offsets:0,0,223,216
+rotate:180
+3_遺跡_下級幽靈 Copy 3
+bounds:2,31,281,192
+offsets:0,0,281,195
+3_遺跡_下級幽靈 Copy 4
+bounds:238,3,43,44
+offsets:1,1,45,46
+3_遺跡_下級幽靈 Copy 5
+bounds:341,3,35,38
+offsets:1,1,37,39
+3_遺跡_下級幽靈 Copy 6
+bounds:2,5,37,38
+offsets:1,1,38,40

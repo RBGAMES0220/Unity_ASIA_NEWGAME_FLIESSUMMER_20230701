@@ -1,0 +1,20 @@
+009_骸骨魚.png
+size:525,354
+filter:Linear,Linear
+pma:true
+骸骨魚 的複製 3
+bounds:2,35,150,65
+offsets:0,71,281,149
+rotate:90
+骸骨魚 的複製 4
+bounds:172,2,225,281
+rotate:90
+骸骨魚 的複製 5
+bounds:62,2,101,87
+rotate:90
+骸骨魚 的複製 6
+bounds:2,85,442,267
+offsets:0,18,442,285
+骸骨魚 的複製 7
+bounds:360,151,201,163
+rotate:270

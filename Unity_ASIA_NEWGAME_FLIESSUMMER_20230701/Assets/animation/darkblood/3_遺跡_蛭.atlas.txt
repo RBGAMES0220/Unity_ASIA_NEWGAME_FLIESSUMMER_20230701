@@ -1,0 +1,39 @@
+3_遺跡_蛭.png
+size:419,256
+filter:Linear,Linear
+pma:true
+3_遺跡_蛭 Copy
+bounds:288,11,221,129
+offsets:18,3,239,135
+rotate:270
+3_遺跡_蛭 Copy 10
+bounds:138,120,27,44
+offsets:6,7,39,53
+3_遺跡_蛭 Copy 11
+bounds:43,123,35,52
+offsets:5,8,46,61
+rotate:90
+3_遺跡_蛭 Copy 2
+bounds:220,6,42,62
+offsets:3,9,204,89
+3_遺跡_蛭 Copy 4
+bounds:2,2,294,252
+3_遺跡_蛭 Copy 5
+bounds:86,141,32,51
+offsets:1,9,173,74
+rotate:90
+3_遺跡_蛭 Copy 6
+bounds:2,6,31,47
+offsets:2,6,36,55
+rotate:90
+3_遺跡_蛭 Copy 7
+bounds:2,143,33,59
+offsets:4,3,42,65
+rotate:90
+3_遺跡_蛭 Copy 8
+bounds:263,7,28,54
+offsets:4,4,37,65
+3_遺跡_蛭 Copy 9
+bounds:360,221,28,43
+offsets:5,3,36,50
+rotate:90

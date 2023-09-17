@@ -1,0 +1,17 @@
+2_水晶生態_水貓.png
+size:499,559
+filter:Linear,Linear
+pma:true
+2_水晶生態_水貓 Copy 2
+bounds:362,18,120,159
+2_水晶生態_水貓 Copy 3
+bounds:2,2,495,555
+2_水晶生態_水貓 Copy 4
+bounds:2,14,59,81
+offsets:1,1,67,87
+2_水晶生態_水貓 Copy 5
+bounds:234,10,71,91
+offsets:11,6,83,101
+2_水晶生態_水貓 Copy 6
+bounds:446,120,47,102
+offsets:318,0,366,373

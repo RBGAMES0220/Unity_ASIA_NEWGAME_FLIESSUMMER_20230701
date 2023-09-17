@@ -1,0 +1,30 @@
+2_水晶生態_冰晶水母.png
+size:441,683
+filter:Linear,Linear
+pma:true
+2_水晶生態_冰晶水母 Copy 10
+bounds:166,218,200,455
+rotate:180
+2_水晶生態_冰晶水母 Copy 11
+bounds:44,11,86,296
+offsets:0,2,86,298
+rotate:270
+2_水晶生態_冰晶水母 Copy 2
+bounds:2,387,295,294
+offsets:0,0,303,294
+2_水晶生態_冰晶水母 Copy 4
+bounds:125,40,290,207
+offsets:0,1,291,215
+2_水晶生態_冰晶水母 Copy 5
+bounds:90,87,295,377
+2_水晶生態_冰晶水母 Copy 6
+bounds:105,210,219,471
+2_水晶生態_冰晶水母 Copy 7
+bounds:220,98,192,404
+2_水晶生態_冰晶水母 Copy 8
+bounds:252,2,187,233
+offsets:1,12,189,245
+rotate:180
+2_水晶生態_冰晶水母 Copy 9
+bounds:26,87,204,308
+offsets:0,1,204,310
