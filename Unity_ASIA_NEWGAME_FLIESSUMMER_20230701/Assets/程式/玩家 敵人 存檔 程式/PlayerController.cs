@@ -126,6 +126,8 @@ namespace GLORY
                 jumpCount = 0;
                 anim.SetBool("falling", false);
                 anim.SetBool("idle", true);
+                anim.SetBool("doubleJumping", false);
+                anim.SetBool("jumping", false);
             }
         }
 
@@ -220,8 +222,9 @@ namespace GLORY
             }
             if (!isAttacking)
             {
+                anim.SetTrigger("isAttacking");
                 isAttacking = true;
-                anim.SetBool("isAttacking", true);
+                print("<color=#56f>攻擊</color>");
             }
 
           
@@ -263,7 +266,7 @@ namespace GLORY
         public void OnAttackAnimationEnd()
         {
             isAttacking = false;
-            anim.SetBool("isAttacking", false);
+            //anim.SetBool("isAttacking", false);
         }
 
         // 傷害停止時播放待機動畫
