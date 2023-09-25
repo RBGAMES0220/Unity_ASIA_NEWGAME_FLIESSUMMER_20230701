@@ -41,14 +41,14 @@ namespace GLORY
         }
 
 
-       /* public static void CreateNewItem(Item item)
-        {
-            Slot newItem = Instantiate(instance.slotPrefab, instance.slotGrid.transform.position, Quaternion.identity);
-            newItem.gameObject.transform.SetParent(instance.slotGrid.transform);
-            newItem.slotItem = item;
-            newItem.slotImage.sprite = item.itemImage;
-            newItem.slotNum.text = item.itemHeld.ToString();
-        }*/
+        /* public static void CreateNewItem(Item item)
+         {
+             Slot newItem = Instantiate(instance.slotPrefab, instance.slotGrid.transform.position, Quaternion.identity);
+             newItem.gameObject.transform.SetParent(instance.slotGrid.transform);
+             newItem.slotItem = item;
+             newItem.slotImage.sprite = item.itemImage;
+             newItem.slotNum.text = item.itemHeld.ToString();
+         }*/
 
         public static void RefreshItem()
         {

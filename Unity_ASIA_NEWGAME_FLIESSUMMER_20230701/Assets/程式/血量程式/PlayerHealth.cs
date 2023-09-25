@@ -7,18 +7,16 @@ namespace GLORY
         public int maxHealth = 100; // 玩家的最大生命值
         public int currentHealth; // 玩家的當前生命值
         public Animator anim; // 玩家的Animator組件
+        public static bool isDead = false; // 是否死亡
+        public AudioSource hurtAudioSource; // 受傷音效的AudioSource組件
 
         private PlayerController playerController; // 玩家的PlayerController腳本
-        public static bool isDead = false; // 是否死亡
-
-        public AudioSource hurtAudioSource; // 受傷音效的AudioSource組件
 
         private void Start()
         {
             currentHealth = maxHealth; // 將當前生命值初始化為最大生命值
             anim = GetComponent<Animator>();
             playerController = GetComponent<PlayerController>(); // 取得玩家的PlayerController腳本
-
             isDead = false;
         }
 
@@ -29,7 +27,6 @@ namespace GLORY
                 return;
 
             currentHealth -= damageAmount; // 扣除傷害值
-
 
             if (currentHealth <= 0)
             {
@@ -48,7 +45,6 @@ namespace GLORY
                     hurtAudioSource.Play();
                 }
             }
-
 
             // 如果生命值大於 0，將動畫設置回 idle 狀態
             if (currentHealth > 0)
@@ -75,28 +71,56 @@ namespace GLORY
                 playerController.enabled = false; // 停用PlayerController腳本
             }
 
-            // 停止播放音效：這裡假設你的音效是由AudioSource組件播放的，如果是其他方式播放音效，相應地進行停止處理
+            // 停止播放音效
             AudioSource[] audioSources = GetComponents<AudioSource>();
             foreach (AudioSource audioSource in audioSources)
             {
                 audioSource.Stop();
             }
 
-            // 停止所有動畫：這裡假設你的動畫是由Animator組件控制的，如果是其他方式播放動畫，相應地進行停止處理
-            //if (anim != null)
+            // 銷毀玩家物件
+            Destroy(gameObject, 2f); // 2秒後銷毀物件
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            // 檢查碰撞的對象是否是補血藥水
+            if (other.CompareTag("HealthPotion"))
             {
-               // anim.enabled = false; // 停用Animator組件
+                // 獲取補血藥水腳本
+                HealthPotion healthPotion = other.GetComponent<HealthPotion>();
+
+                if (healthPotion != null)
+                {
+                    // 使用補血藥水回復生命值
+                    Heal(healthPotion.healthAmount);
+
+                    // 播放補血藥水音效
+                    if (healthPotion.drinkSound != null)
+                    {
+                        AudioSource.PlayClipAtPoint(healthPotion.drinkSound, transform.position);
+                    }
+
+                    // 銷毀補血藥水遊戲物件
+                    Destroy(other.gameObject);
+                }
+            }
+        }
+
+        public void Heal(int amount)
+        {
+            // 增加生命值
+            currentHealth += amount;
+
+            // 確保不超過最大生命值
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
             }
 
-            // 停止與敵人的碰撞檢測：這裡假設你的碰撞檢測是由Collider2D組件控制的，如果是其他方式進行碰撞檢測，相應地進行停止處理
-            //Collider2D collider = GetComponent<Collider2D>();
-            //if (collider != null)
-            {
-                //collider.enabled = false; // 停用Collider2D組件
-            }
+            // 在這裡您可以添加其他處理回復生命值的邏輯，例如更新UI等
 
-            // 銷毀玩家物件：在完成所有處理後，最後銷毀玩家物件
-            //Destroy(gameObject, 2f); // 0.5秒後銷毀物件
+            Debug.Log("玩家回復了 " + amount + " 點生命值，當前生命值：" + currentHealth);
         }
     }
 }
