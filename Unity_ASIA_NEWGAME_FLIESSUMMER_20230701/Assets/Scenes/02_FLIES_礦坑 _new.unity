@@ -3449,6 +3449,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3056591870426374546, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 3056591870426374555, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
       propertyPath: m_Name
       value: "\u571F\u87F2\u9060\u7A0B (6)"
@@ -6952,6 +6956,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3056591870426374546, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 3056591870426374555, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
       propertyPath: m_Name
       value: "\u571F\u87F2\u9060\u7A0B (1)"
@@ -7475,6 +7483,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3056591870426374546, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 3056591870426374555, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
       propertyPath: m_Name
       value: "\u571F\u87F2\u9060\u7A0B (4)"
@@ -10901,6 +10913,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3056591870426374546, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 3056591870426374555, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
       propertyPath: m_Name
       value: "\u571F\u87F2\u9060\u7A0B (5)"
@@ -14061,6 +14077,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3056591870426374546, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 3056591870426374555, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
       propertyPath: m_Name
       value: "\u571F\u87F2\u9060\u7A0B"
@@ -71527,6 +71547,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3056591870426374546, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 3056591870426374555, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
       propertyPath: m_Name
       value: "\u571F\u87F2\u9060\u7A0B (3)"
@@ -74841,6 +74865,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3056591870426374546, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 1884265970}
     - target: {fileID: 3056591870426374555, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
       propertyPath: m_Name
       value: "\u571F\u87F2\u9060\u7A0B (2)"
@@ -75559,7 +75587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354798858467945545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59.09762, y: 3.1380568, z: -10}
+  m_LocalPosition: {x: -56.188137, y: 3.1332922, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75754,7 +75782,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354798859370552456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.096577, y: 4.516799, z: -10}
+  m_LocalPosition: {x: -56.22384, y: 4.516799, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

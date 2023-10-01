@@ -13,7 +13,7 @@ namespace GLORY
         public AudioSource hurtSound; // 敵人受到傷害音效的AudioSource組件
         public GameObject[] dropItems; // 存放掉落物品的預製物件
         public GameObject damageEffect;// 受傷特效的參考
-
+        public Vector3 damageEffectOffset = new Vector3(0f, 1f, 0f); // 敵人受傷特效的上升偏移量
 
         private bool isDead = false; // 是否死亡
         private bool isTakingDamage = false; // 是否正在受到傷害
@@ -56,8 +56,11 @@ namespace GLORY
                 anim.SetTrigger("Hurt");
                 PlayHurtSound(); // 播放受傷音效
                 isTakingDamage = true;
-                
+
             }
+
+            // 計算生成位置，包括上升偏移量
+            Vector3 spawnPosition = transform.position + damageEffectOffset;
 
             if (currentHealth <= 0)
             {
@@ -67,7 +70,7 @@ namespace GLORY
             // 啟動受傷特效
             if (damageEffect != null)
             {
-                GameObject effect = Instantiate(damageEffect, transform.position, Quaternion.identity);
+                GameObject effect = Instantiate(damageEffect, spawnPosition, Quaternion.identity);
                 Destroy(effect, 1.0f); // 1.0秒後銷毀特效，你可以根據需要調整時間
             }
         }
