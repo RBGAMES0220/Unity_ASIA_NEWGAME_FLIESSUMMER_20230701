@@ -14,6 +14,7 @@ namespace GLORY
         // public Slot slotPrefab;
         public GameObject emptySlot;
         public Text itemInformation;
+        public PlayerHealth playerHealth;
 
         public List<GameObject> slots = new List<GameObject>();
 
@@ -34,7 +35,31 @@ namespace GLORY
             instance.itemInformation.text = "";
         }
 
+        public void UseSelectedItem()
+        {
+            if (myBag.itemList.Count > 0)
+            {
+                // 假設選擇的物品是背包中的第一個物品
+                Item selectedItem = myBag.itemList[0];
 
+                if (selectedItem != null)
+                {
+                    // 檢查物品是否可用
+                    if (selectedItem.isUsable)
+                    {
+                        // 在這裡執行使用物品的操作，例如增加玩家的生命值
+                        // 假設 playerHealth 是玩家的生命值管理器
+                        playerHealth.Heal(selectedItem.value);
+
+                        // 從背包中刪除該物品
+                        myBag.itemList.Remove(selectedItem);
+
+                        // 更新 UI 以反映背包中的變化
+                        RefreshItem();
+                    }
+                }
+            }
+        }
         public static void UpdateItemInfo(string itemDescription)
         {
             instance.itemInformation.text = itemDescription;
