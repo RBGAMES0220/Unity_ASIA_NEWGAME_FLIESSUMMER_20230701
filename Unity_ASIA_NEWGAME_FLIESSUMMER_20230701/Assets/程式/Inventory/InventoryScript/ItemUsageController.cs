@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.EventSystems;
 using GLORY;
 
@@ -8,9 +8,9 @@ public class ItemUsageOnClick : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.button == PointerEventData.InputButton.Left) // ÀË¬d¬O§_¬O·Æ¹«¥ªÁä³æÀ»
+        if (eventData.button == PointerEventData.InputButton.Left) // æª¢æŸ¥æ˜¯å¦æ˜¯æ»‘é¼ å·¦éµå–®æ“Š
         {
-            // ©I¥s InventoryManager ¤¤ªº UseSelectedItem ¤èªk
+            // å‘¼å« InventoryManager ä¸­çš„ UseSelectedItem æ–¹æ³•
             inventoryManager.UseSelectedItem();
         }
     }
