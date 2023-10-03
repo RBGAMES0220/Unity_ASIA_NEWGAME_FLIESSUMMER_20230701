@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/02_FLIES_\u7926\u5751 _new.unity"
     guid: abb412daca0e37c4cb6fffaf24aa3f2a
+  - enabled: 1
+    path: "Assets/Scenes/03_FLIES_\u6C34\u6676\u751F\u614B_new.unity"
+    guid: 394c0c7a44fbbb6428777fea58d451b0
   m_configObjects: {}
