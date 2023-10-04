@@ -9,12 +9,14 @@ namespace GLORY
         public Animator anim; // 玩家的Animator組件
         public static bool isDead = false; // 是否死亡
         public AudioSource hurtAudioSource; // 受傷音效的AudioSource組件
+        public HealthBar healthBar;
 
         private PlayerController playerController; // 玩家的PlayerController腳本
 
         private void Start()
         {
             currentHealth = maxHealth; // 將當前生命值初始化為最大生命值
+            healthBar.SetMaxHealth(maxHealth);
             anim = GetComponent<Animator>();
             playerController = GetComponent<PlayerController>(); // 取得玩家的PlayerController腳本
             isDead = false;
@@ -27,6 +29,8 @@ namespace GLORY
                 return;
 
             currentHealth -= damageAmount; // 扣除傷害值
+
+            healthBar.SetHealth(currentHealth);
 
             if (currentHealth <= 0)
             {
