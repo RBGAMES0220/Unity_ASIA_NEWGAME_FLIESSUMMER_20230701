@@ -11,6 +11,7 @@ namespace Justin
         public List<ShopItem> shopItems = new List<ShopItem>(); // 商城商品資訊清單
         public PlayerInventory playerInventory; // 玩家物品清單
         public TextMeshProUGUI coinsTxt; // 顯示玩家擁有的貨幣數量的文字
+        private int currentItemIndex = 0; // 当前购买的物品索引
 
         [System.Serializable]
         public class ShopItem
@@ -19,7 +20,6 @@ namespace Justin
             public string itemName; // 商品名稱
             public int exchangeItemID; // 玩家需擁有的物品ID，用於交換該商城商品
             public int exchangeItemQuantity; // 需要的玩家物品數量
-            public int itemQuantity; // 商城商品數量
             public TextMeshProUGUI quantityText; // 顯示商城商品數量的 UI Text
         }
 
@@ -29,7 +29,6 @@ namespace Justin
             public int itemID; // 物品ID
             public string itemName; // 物品名稱
             public int quantity; // 物品數量
-
         }
 
         [System.Serializable]
@@ -42,24 +41,49 @@ namespace Justin
         {
             UpdateCoinsText(); // 更新顯示玩家擁有的貨幣數量的文字
             UpdateQuantityText(); // 更新顯示商城商品數量與玩家物品數量的文字
+            foreach (ShopItem item in shopItems)
+            {
+                Debug.Log("商城物品：" + item.itemName + " 的 itemID 是：" + item.itemID);
+            }
+
+            foreach (PlayerItem playerItem in playerInventory.playerItems)
+            {
+                Debug.Log("玩家物品：" + playerItem.itemName + " 的 itemID 是：" + playerItem.itemID);
+            }
         }
 
-        public void Buy(ShopItem item)
+        public void BuyCurrentItem()
         {
-            PlayerItem playerItem = playerInventory.playerItems.Find(x => x.itemID == item.exchangeItemID);
-            if (playerItem != null && playerItem.quantity >= item.exchangeItemQuantity && item.itemQuantity > 0)
+            if (currentItemIndex >= 0 && currentItemIndex < shopItems.Count)
             {
-                // 玩家有足夠的物品進行交換，且商城商品數量大於 0
-                playerItem.quantity -= item.exchangeItemQuantity;
-                item.itemQuantity--; // 減少商城商品數量
-                UpdateCoinsText(); // 更新顯示玩家擁有的貨幣數量的文字
-                UpdateQuantityText(); // 更新顯示商城商品數量與玩家物品數量的文字
-                Debug.Log("玩家成功兌換了 " + item.itemName);
-            }
-            else
-            {
-                // 玩家沒有足夠的物品進行交換或商城商品數量不足
-                Debug.Log("玩家沒有足夠的物品進行交換或商城商品數量不足。");
+                ShopItem item = shopItems[currentItemIndex];
+                PlayerItem playerItem = playerInventory.playerItems.Find(x => x.itemID == item.exchangeItemID);
+
+                if (playerItem != null && playerItem.quantity >= item.exchangeItemQuantity)
+                {
+                    // 玩家有足够的物品进行交换
+                    playerItem.quantity -= item.exchangeItemQuantity;
+                    UpdateCoinsText(); // 更新顯示玩家擁有的貨幣數量的文字
+                    Debug.Log("玩家成功兌換了 " + item.itemName);
+
+                    // 增加当前购买的物品索引，以便购买下一个物品
+                    currentItemIndex++;
+
+                    // 检查是否还有更多物品可以购买
+                    if (currentItemIndex < shopItems.Count)
+                    {
+                        Debug.Log("可以购买下一个物品：" + shopItems[currentItemIndex].itemName);
+                    }
+                    else
+                    {
+                        Debug.Log("已购买所有物品。");
+                    }
+                }
+                else
+                {
+                    // 玩家没有足够的物品进行交换
+                    Debug.Log("玩家没有足够的物品进行交换。");
+                }
             }
         }
 
@@ -83,11 +107,10 @@ namespace Justin
             {
                 if (item.quantityText != null)
                 {
-                    item.quantityText.text = "x" + item.itemQuantity.ToString();
+                    // 在這裡不再顯示商城商品的庫存數量
+                    item.quantityText.text = "";
                 }
             }
-
-
         }
 
         // 取得玩家目前的總硬幣數量（這裡只是將所有物品數量相加，模擬使用硬幣）
@@ -99,16 +122,6 @@ namespace Justin
                 totalCoins += playerItem.quantity;
             }
             return totalCoins;
-        }
-
-        // 按鈕點擊事件處理
-        public void OnButtonClick()
-        {
-            // 假設這個按鈕代表商城中的第一個
-            if (shopItems.Count > 0)
-            {
-                Buy(shopItems[0]);
-            }
         }
     }
 }
