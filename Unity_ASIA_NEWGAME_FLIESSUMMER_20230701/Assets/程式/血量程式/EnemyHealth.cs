@@ -11,7 +11,7 @@ namespace GLORY
         public Slider healthSlider; // 生命條Slider
         public Animator anim; // 敵人的Animator
         public AudioSource hurtSound; // 敵人受到傷害音效的AudioSource組件
-        public GameObject[] dropItems; // 存放掉落物品的預製物件
+        public GameObject itemPrefab; // 道具的預製物
         public GameObject damageEffect;// 受傷特效的參考
         public Vector3 damageEffectOffset = new Vector3(0f, 1f, 0f); // 敵人受傷特效的上升偏移量
 
@@ -90,20 +90,22 @@ namespace GLORY
             // 銷毀敵人物件
             Destroy(gameObject, 3f); // 3秒後銷毀物件
 
+            // 延遲一秒後生成道具
+            Invoke("SpawnItem", 1f);
+
             // 停止敵人的移動
             if (movementScript != null)
             {
                 movementScript.enabled = false; // 停用敵人的移動腳本
             }
+        }
 
-            if (dropItems.Length > 0)
-            {
-                int randomIndex = Random.Range(0, dropItems.Length); // 隨機選擇一個掉落物品
-                GameObject dropItem = dropItems[randomIndex];
+        private void SpawnItem()
+        {
+            // 生成道具
+            Instantiate(itemPrefab, transform.position, Quaternion.identity);
 
-                Instantiate(dropItem, transform.position, Quaternion.identity);
-            }
-
+            // 可以在這裡添加其他生成後的處理邏輯
         }
 
         // 受傷音效的播放

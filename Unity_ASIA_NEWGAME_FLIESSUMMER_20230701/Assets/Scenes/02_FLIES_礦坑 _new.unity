@@ -75175,6 +75175,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1884265970}
+    - target: {fileID: 3056591870426374546, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 14972643867760962, guid: fb75490aae8abcb49ac5776171499fc3, type: 3}
     - target: {fileID: 3056591870426374555, guid: 34ec31ab9c77b5641bbac52b2e5f342e, type: 3}
       propertyPath: m_Name
       value: "\u571F\u87F2\u9060\u7A0B (2)"
@@ -75893,7 +75897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354798858467945545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.962425, y: 3.113615, z: -10}
+  m_LocalPosition: {x: -55.278397, y: 3.131937, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76088,7 +76092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354798859370552456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.37877, y: 4.516799, z: -10}
+  m_LocalPosition: {x: -55.47785, y: 4.516799, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
