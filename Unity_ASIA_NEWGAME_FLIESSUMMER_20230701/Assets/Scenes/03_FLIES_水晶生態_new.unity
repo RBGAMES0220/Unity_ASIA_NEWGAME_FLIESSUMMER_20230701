@@ -477,7 +477,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1688615744}
         m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -549,7 +549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454497, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454497, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_LocalScale.x
@@ -605,7 +605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454500, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_Name
-      value: "\u6C34\u6676\u73A9\u5BB6"
+      value: "\u73A9\u5BB6"
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454500, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_Layer
@@ -682,7 +682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &116531784
 RectTransform:
   m_ObjectHideFlags: 0
@@ -779,7 +779,7 @@ Transform:
   - {fileID: 828973597}
   - {fileID: 1569967093}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &132604444
 GameObject:
@@ -1963,7 +1963,7 @@ Transform:
   - {fileID: 1557250694}
   - {fileID: 723836901}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &398168864
 PrefabInstance:
@@ -2303,7 +2303,7 @@ Transform:
   - {fileID: 1525037773}
   - {fileID: 426352255}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &561975446
 GameObject:
@@ -2462,7 +2462,7 @@ Transform:
   - {fileID: 2119638980}
   - {fileID: 1620018636}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &567329855
 GameObject:
@@ -2530,7 +2530,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &589551019
 GameObject:
@@ -2660,7 +2660,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2753,13 +2753,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1688615744}
         m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\u7528\u4E09\u500B\u8089\u63DB\u751F\u547D\u85E5\u6C34"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &606124253
@@ -2939,7 +2939,7 @@ Transform:
   - {fileID: 353784614}
   - {fileID: 318401995}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &697692016
 PolygonCollider2D:
@@ -3092,7 +3092,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1688615744}
         m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9224,7 +9224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872621827162815795, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4872621827162815795, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9315,7 +9315,7 @@ Transform:
   - {fileID: 303659084}
   - {fileID: 288135521}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &828973596
 GameObject:
@@ -9445,7 +9445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872621827162815795, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4872621827162815795, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9640,7 +9640,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 976508625284261377, guid: 16bfa4c2cc742d941876d59c8f3e5407, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 976508625284261377, guid: 16bfa4c2cc742d941876d59c8f3e5407, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9935,7 +9935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872621827162815795, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4872621827162815795, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10404,7 +10404,7 @@ Transform:
   - {fileID: 64906322}
   - {fileID: 192694039}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &967157156
 GameObject:
@@ -10523,13 +10523,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1688615744}
         m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\u7528\u4E00\u500B\u9152\u74F6\u63DB\u751F\u547D\u85E5\u6C34"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &985824992
@@ -48178,7 +48178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4936657585065384072, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 4936657585065384072, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -48620,13 +48620,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153085037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -56.9497, y: -22.916174, z: -10}
+  m_LocalPosition: {x: -58.505783, y: -22.916174, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2031373836}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1153085041
 MonoBehaviour:
@@ -48887,7 +48886,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1688615744}
         m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -48978,7 +48977,7 @@ Transform:
   - {fileID: 1032535879}
   - {fileID: 752203611}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1286256625 stripped
 AudioSource:
@@ -49357,7 +49356,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1432143931
 GameObject:
@@ -49516,7 +49515,7 @@ Transform:
   - {fileID: 1697817753}
   - {fileID: 967157157}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512818724
 GameObject:
@@ -49872,7 +49871,7 @@ Transform:
   m_Children:
   - {fileID: 2103960466}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1538133959
 MonoBehaviour:
@@ -50426,7 +50425,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697817752
 GameObject:
@@ -50616,7 +50615,7 @@ Transform:
   - {fileID: 63291038}
   - {fileID: 1345819711}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1795714092
 GameObject:
@@ -51445,13 +51444,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1688615744}
         m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\u7528\u4E00\u500B\u9152\u74F6\u63DB\u7A7A\u74F6"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2012209310
@@ -51547,7 +51546,7 @@ Transform:
   - {fileID: 1293213604}
   - {fileID: 832314364}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2031373835
 GameObject:
@@ -51581,7 +51580,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 116531784}
-  m_Father: {fileID: 1153085040}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -51618,10 +51617,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -51988,7 +51987,7 @@ Transform:
   - {fileID: 133421306}
   - {fileID: 1795714093}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2119638979
 GameObject:
@@ -52034,7 +52033,7 @@ PrefabInstance:
       objectReference: {fileID: 1950900959}
     - target: {fileID: 976508625284261377, guid: 16bfa4c2cc742d941876d59c8f3e5407, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 976508625284261377, guid: 16bfa4c2cc742d941876d59c8f3e5407, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52111,7 +52110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872621827162815795, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4872621827162815795, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52184,7 +52183,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5461960199938172722, guid: 0406c47e11257684da6e02df1e8d7c2b, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5461960199938172722, guid: 0406c47e11257684da6e02df1e8d7c2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52285,7 +52284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856293507232310237, guid: 9808e706f26569645a3fa5789738b541, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8856293507232310237, guid: 9808e706f26569645a3fa5789738b541, type: 3}
       propertyPath: m_LocalPosition.x

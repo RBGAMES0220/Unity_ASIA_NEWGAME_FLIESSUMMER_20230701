@@ -52,8 +52,33 @@ namespace Justin
             }
         }
 
-        public void BuyCurrentItem()
+        /// <summary>
+        /// 購買道具
+        /// 1. 用一個酒瓶換生命藥水
+        /// 2. 用三個肉換生命藥水
+        /// 3. 用一個酒瓶換空瓶
+        /// 
+        /// </summary>
+        /// <param name="nameItem">玩家要購買的道具</param>
+        public void BuyCurrentItem(string nameItem)
         {
+            print($"<color=#f69>玩家按下按鈕，要換的項目：{nameItem}</color>");
+
+            if (nameItem == "用一個酒瓶換生命藥水")
+            {
+
+            }
+            else if (nameItem == "用三個肉換生命藥水")
+            {
+
+            }
+            else if (nameItem == "用一個酒瓶換空瓶")
+            {
+
+            }
+
+
+            /*
             if (currentItemIndex >= 0 && currentItemIndex < shopItems.Count)
             {
                 ShopItem item = shopItems[currentItemIndex];
@@ -84,7 +109,7 @@ namespace Justin
                     // 玩家没有足够的物品进行交换
                     Debug.Log("玩家没有足够的物品进行交换。");
                 }
-            }
+            */
         }
 
         // 從玩家物品清單中取得指定物品的數量
