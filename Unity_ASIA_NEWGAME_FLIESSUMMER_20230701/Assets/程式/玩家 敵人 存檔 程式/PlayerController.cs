@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace GLORY
 {
@@ -21,9 +22,11 @@ namespace GLORY
         public AudioSource attackSound; // 要播放的攻擊音效的AudioSource組件
         public AudioSource moveSound; // 移動音效的AudioSource組件
         public AudioSource jumpSound; // 要播放的跳躍音效的AudioSource組件
-        public GameObject attackEffect; // 攻擊特效的引用
+        public GameObject[] attackEffects; // 攻擊特效的引用
         public Vector3 attackEffectOffset = new Vector3(0f, 1f, 0f); // 上升偏移量
-
+        private int comboCount = 0;
+        private float lastAttackTime;
+        public float comboTimeThreshold = 0.5f;
 
 
         private Rigidbody2D rb; // Rigidbody2D組件
@@ -85,8 +88,44 @@ namespace GLORY
 
             if (Input.GetButtonDown("Fire1"))
             {
-                // 攻擊按鈕的檢測
-                Attack();
+                // 如果可以進行下一個攻擊（在時間閾值內按下攻擊）
+                if (Time.time - lastAttackTime <= comboTimeThreshold)
+                {
+                    if (comboCount == 0)
+                    {
+                        // 第一段攻擊
+                        anim.Play("attack");
+                        Attack(1);                        
+                    }
+                    else if (comboCount == 1)
+                    {
+                        // 第二段攻擊
+                        anim.Play("attack-2");
+                        Attack(2);
+
+                    }
+                    else if (comboCount == 2)
+                    {
+                        // 第三段攻擊
+                        anim.Play("attack-3");
+                        Attack(3);
+                        comboCount = -1; // 重置，允許下一輪連段攻擊
+                    }
+
+                    // 增加 comboCount
+                    comboCount++;
+                }
+                else
+                {
+                    // 未在時間閾值內按下攻擊，重置 comboCount
+                    anim.Play("attack");
+                    Attack(1);
+                    comboCount = 0;
+                }
+
+                // 更新上一次攻擊時間
+                lastAttackTime = Time.time;
+                
             }
         }
 
@@ -194,7 +233,7 @@ namespace GLORY
         }
 
 
-        private void Attack()
+        private void Attack(int attackNumber)
         {
             
             // 在攻擊時進行碰撞檢測，檢測是否有敵人在攻擊範圍內
@@ -222,7 +261,7 @@ namespace GLORY
             }
             if (!isAttacking)
             {
-                anim.SetTrigger("isAttacking");
+                //anim.SetTrigger("isAttacking");
                 isAttacking = true;
                 print("<color=#56f>攻擊</color>");
             }
@@ -240,10 +279,11 @@ namespace GLORY
             Quaternion spawnRotation = (transform.localScale.x > 0) ? Quaternion.identity : Quaternion.Euler(0, 180, 0);
 
             // 啟動攻擊特效
-            if (attackEffect != null)
+            if (attackEffects.Length != 0)
             {
-                GameObject effect = Instantiate(attackEffect, spawnPosition, spawnRotation);
-                Destroy(effect, 1.0f); // 1.0秒後銷毀特效，你可以根據需要調整時間
+                GameObject effect = Instantiate(attackEffects[attackNumber - 1], spawnPosition, spawnRotation);
+                Destroy(effect, 1.0f);
+                 // 1.0秒後銷毀特效，你可以根據需要調整時間
             }
         }
 
@@ -266,7 +306,6 @@ namespace GLORY
         public void OnAttackAnimationEnd()
         {
             isAttacking = false;
-            //anim.SetBool("isAttacking", false);
         }
 
         // 傷害停止時播放待機動畫

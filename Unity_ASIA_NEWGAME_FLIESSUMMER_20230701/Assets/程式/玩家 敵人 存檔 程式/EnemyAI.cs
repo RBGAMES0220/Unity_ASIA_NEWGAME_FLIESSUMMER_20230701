@@ -202,8 +202,15 @@ namespace GLORY
         private bool ShouldChase()
         {
             // 檢查敵人與玩家之間的距離是否小於某個閾值，如果是則切換到追逐狀態
-            float distanceToTarget = Vector3.Distance(transform.position, target.position);
-            return distanceToTarget < detectionRadius;
+            if (target != null)
+            {
+                float distanceToTarget = Vector3.Distance(transform.position, target.position);
+                return distanceToTarget < detectionRadius;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void Flip()
