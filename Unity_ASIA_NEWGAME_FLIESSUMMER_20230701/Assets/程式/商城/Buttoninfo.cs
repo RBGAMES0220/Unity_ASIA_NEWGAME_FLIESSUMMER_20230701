@@ -1,127 +1,174 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
-namespace Justin
+public class Buttoninfo : MonoBehaviour
 {
-    public class Buttoninfo : MonoBehaviour
+    public List<ShopItem> shopItems = new List<ShopItem>();
+    public PlayerInventory playerInventory;
+    public TextMeshProUGUI coinsTxt;
+
+    private int currentItemIndex = 0;
+
+    [System.Serializable]
+    public class ShopItem
     {
-        public List<ShopItem> shopItems = new List<ShopItem>(); // 商城商品資訊清單
-        public PlayerInventory playerInventory; // 玩家物品清單
-        public TextMeshProUGUI coinsTxt; // 顯示玩家擁有的貨幣數量的文字
-        private int currentItemIndex = 0; // 当前购买的物品索引
+        public int itemID;
+        public string itemName;
+        public int exchangeItemID;
+        public int exchangeItemQuantity;
+    }
 
-        [System.Serializable]
-        public class ShopItem
+    [System.Serializable]
+    public class PlayerItem
+    {
+        public int itemID;
+        public string itemName;
+        public int quantity;
+    }
+
+    [System.Serializable]
+    public class PlayerInventory
+    {
+        public List<PlayerItem> playerItems = new List<PlayerItem>();
+    }
+
+    private void Start()
+    {
+        UpdateCoinsText();
+        UpdateQuantityText();
+
+        // 在這裡設置初始物品清單
+        playerInventory.playerItems.Add(new PlayerItem { itemID = 1, itemName = "酒瓶", quantity = 6 });
+        playerInventory.playerItems.Add(new PlayerItem { itemID = 2, itemName = "肉", quantity = 6 });
+        playerInventory.playerItems.Add(new PlayerItem { itemID = 3, itemName = "牙", quantity = 6 });
+        playerInventory.playerItems.Add(new PlayerItem { itemID = 4, itemName = "凝膠", quantity = 6 });
+        playerInventory.playerItems.Add(new PlayerItem { itemID = 5, itemName = "骨頭", quantity = 6 });
+        
+
+        // 添加更多初始物品...
+
+        foreach (ShopItem item in shopItems)
         {
-            public int itemID; // 商品ID
-            public string itemName; // 商品名稱
-            public int exchangeItemID; // 玩家需擁有的物品ID，用於交換該商城商品
-            public int exchangeItemQuantity; // 需要的玩家物品數量
-            public TextMeshProUGUI quantityText; // 顯示商城商品數量的 UI Text
+            Debug.Log("商城物品：" + item.itemName + " 的 itemID 是：" + item.itemID);
         }
 
-        [System.Serializable]
-        public class PlayerItem
+        foreach (PlayerItem playerItem in playerInventory.playerItems)
         {
-            public int itemID; // 物品ID
-            public string itemName; // 物品名稱
-            public int quantity; // 物品數量
+            Debug.Log("玩家物品：" + playerItem.itemName + " 的 itemID 是：" + playerItem.itemID);
+        }
+    }
+
+    public void BuyCurrentItem(string nameItem)
+    {
+        print($"<color=#f69>玩家按下按鈕，要換的項目：{nameItem}</color>");
+
+        // 確保有足夠的物品進行交換
+        bool canExchange = false;
+        int exchangeItemID = -1;
+        int exchangeQuantity = 0;
+
+        // 根據選擇的名稱來設定交換物品ID和數量
+        switch (nameItem)
+        {
+            case "用一個酒瓶換生命藥水":
+                exchangeItemID = 1; // 酒瓶的物品ID
+                exchangeQuantity = 1; // 交換1個
+                break;
+
+            case "用三個肉換生命藥水":
+                exchangeItemID = 2; // 肉的物品ID
+                exchangeQuantity = 3; // 交換3個
+                break;
+            case "用一個酒瓶換空瓶":
+                exchangeItemID = 1; // 酒瓶的物品ID
+                exchangeQuantity = 1; // 交換1個
+                break;
+
+            case "用六個牙換蘑菇彈":
+                exchangeItemID = 3; // 牙的物品ID（假設3是牙的物品ID）
+                exchangeQuantity = 6; // 交換6個
+                break;
+
+            case "用六個凝膠換凝膠彈":
+                exchangeItemID = 4; // 凝膠的物品ID（假設4是凝膠的物品ID）
+                exchangeQuantity = 6; // 交換6個
+                break;
+
+            case "用六個骨頭換燃燒彈":
+                exchangeItemID = 5; // 骨頭的物品ID（假設5是骨頭的物品ID）
+                exchangeQuantity = 6; // 交換6個
+                break;
+
+            // 添加更多物品交換設定...
+
+            default:
+                break;
         }
 
-        [System.Serializable]
-        public class PlayerInventory
+        if (exchangeItemID != -1 && exchangeQuantity > 0)
         {
-            public List<PlayerItem> playerItems = new List<PlayerItem>(); // 玩家物品清單的列表
-        }
-
-        private void Start()
-        {
-            UpdateCoinsText(); // 更新顯示玩家擁有的貨幣數量的文字
-            UpdateQuantityText(); // 更新顯示商城商品數量與玩家物品數量的文字
-            foreach (ShopItem item in shopItems)
+            // 檢查玩家是否有足夠的物品進行交換
+            int playerItemIndex = playerInventory.playerItems.FindIndex(x => x.itemID == exchangeItemID);
+            if (playerItemIndex != -1 && playerInventory.playerItems[playerItemIndex].quantity >= exchangeQuantity)
             {
-                Debug.Log("商城物品：" + item.itemName + " 的 itemID 是：" + item.itemID);
+                // 玩家有足夠的物品進行交換
+                playerInventory.playerItems[playerItemIndex].quantity -= exchangeQuantity;
+                canExchange = true;
             }
+        }
 
-            foreach (PlayerItem playerItem in playerInventory.playerItems)
+        if (canExchange)
+        {
+            // 完成交換
+            UpdateCoinsText();
+            Debug.Log($"玩家成功兌換了 {nameItem}");
+
+            currentItemIndex++;
+
+            if (currentItemIndex < shopItems.Count)
             {
-                Debug.Log("玩家物品：" + playerItem.itemName + " 的 itemID 是：" + playerItem.itemID);
+                Debug.Log("可以購買下一个物品：" + shopItems[currentItemIndex].itemName);
             }
-        }
-
-        public void BuyCurrentItem()
-        {
-            if (currentItemIndex >= 0 && currentItemIndex < shopItems.Count)
+            else
             {
-                ShopItem item = shopItems[currentItemIndex];
-                PlayerItem playerItem = playerInventory.playerItems.Find(x => x.itemID == item.exchangeItemID);
-
-                if (playerItem != null && playerItem.quantity >= item.exchangeItemQuantity)
-                {
-                    // 玩家有足够的物品进行交换
-                    playerItem.quantity -= item.exchangeItemQuantity;
-                    UpdateCoinsText(); // 更新顯示玩家擁有的貨幣數量的文字
-                    Debug.Log("玩家成功兌換了 " + item.itemName);
-
-                    // 增加当前购买的物品索引，以便购买下一个物品
-                    currentItemIndex++;
-
-                    // 检查是否还有更多物品可以购买
-                    if (currentItemIndex < shopItems.Count)
-                    {
-                        Debug.Log("可以购买下一个物品：" + shopItems[currentItemIndex].itemName);
-                    }
-                    else
-                    {
-                        Debug.Log("已购买所有物品。");
-                    }
-                }
-                else
-                {
-                    // 玩家没有足够的物品进行交换
-                    Debug.Log("玩家没有足够的物品进行交换。");
-                }
+                Debug.Log("已購買所有物品。");
             }
         }
-
-        // 從玩家物品清單中取得指定物品的數量
-        public int GetPlayerItemCount(int itemID)
+        else
         {
-            PlayerItem playerItem = playerInventory.playerItems.Find(x => x.itemID == itemID);
-            return playerItem != null ? playerItem.quantity : 0;
+            Debug.Log("玩家没有足夠的物品進行交换。");
         }
+    }
 
-        private void UpdateCoinsText()
-        {
-            // 更新顯示玩家擁有的貨幣數量的文字
-            coinsTxt.text = "Coins: " + GetTotalCoins().ToString();
-        }
+    public int GetPlayerItemCount(int itemID)
+    {
+        PlayerItem playerItem = playerInventory.playerItems.Find(x => x.itemID == itemID);
+        return playerItem != null ? playerItem.quantity : 0;
+    }
 
-        private void UpdateQuantityText()
-        {
-            // 更新顯示商城商品數量的文字
-            foreach (ShopItem item in shopItems)
-            {
-                if (item.quantityText != null)
-                {
-                    // 在這裡不再顯示商城商品的庫存數量
-                    item.quantityText.text = "";
-                }
-            }
-        }
+    private void UpdateCoinsText()
+    {
+        int totalCoins = GetTotalCoins();
+        coinsTxt.text = "Coins: " + totalCoins.ToString();
+    }
 
-        // 取得玩家目前的總硬幣數量（這裡只是將所有物品數量相加，模擬使用硬幣）
-        private int GetTotalCoins()
+    private void UpdateQuantityText()
+    {
+        // 更新商城商品的庫存數量（這裡只是範例，你可以設定實際的庫存數量）
+        foreach (ShopItem item in shopItems)
         {
-            int totalCoins = 0;
-            foreach (PlayerItem playerItem in playerInventory.playerItems)
-            {
-                totalCoins += playerItem.quantity;
-            }
-            return totalCoins;
+            Debug.Log("商城商品 " + item.itemName + " 的庫存數量：" + GetPlayerItemCount(item.exchangeItemID));
         }
+    }
+
+    private int GetTotalCoins()
+    {
+        int totalCoins = 0;
+        foreach (PlayerItem playerItem in playerInventory.playerItems)
+        {
+            totalCoins += playerItem.quantity;
+        }
+        return totalCoins;
     }
 }

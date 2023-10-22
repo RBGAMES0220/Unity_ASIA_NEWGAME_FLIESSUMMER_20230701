@@ -475,15 +475,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1688615744}
-        m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
+        m_TargetAssemblyTypeName: Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\u7528\u516D\u500B\u51DD\u81A0\u63DB\u51DD\u81A0\u5F48"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &84262155
@@ -698,7 +698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &116531784
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2769,13 +2769,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1688615744}
         m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\u7528\u4E09\u500B\u8089\u63DB\u751F\u547D\u85E5\u6C34"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &606124253
@@ -3106,15 +3106,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1688615744}
-        m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
+        m_TargetAssemblyTypeName: Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\u7528\u516D\u500B\u9AA8\u982D\u63DB\u71C3\u71D2\u5F48"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &751823465
@@ -10537,15 +10537,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1688615744}
-        m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
+        m_TargetAssemblyTypeName: Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\u7528\u4E00\u500B\u9152\u74F6\u63DB\u751F\u547D\u85E5\u6C34"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &985824992
@@ -48636,7 +48636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153085037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -69.332, y: -22.927715, z: -10}
+  m_LocalPosition: {x: -46.194565, y: -22.916174, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48901,15 +48901,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1688615744}
-        m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
+        m_TargetAssemblyTypeName: Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\u7528\u516D\u500B\u7259\u63DB\u8611\u83C7\u5F48"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1255992041
@@ -50372,7 +50372,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688615743}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c14cf67d896368140976e07ff4b71a97, type: 3}
   m_Name: 
@@ -50382,52 +50382,28 @@ MonoBehaviour:
     itemName: "\u751F\u547D\u85E5\u6C34"
     exchangeItemID: 1001
     exchangeItemQuantity: 1
-    quantityText: {fileID: 0}
   - itemID: 2
     itemName: "\u751F\u547D\u85E5\u6C34"
     exchangeItemID: 1002
     exchangeItemQuantity: 3
-    quantityText: {fileID: 0}
   - itemID: 3
     itemName: "\u7A7A\u74F6"
     exchangeItemID: 1006
     exchangeItemQuantity: 1
-    quantityText: {fileID: 0}
   - itemID: 4
     itemName: "\u8611\u83C7\u5F48"
     exchangeItemID: 1003
     exchangeItemQuantity: 6
-    quantityText: {fileID: 0}
   - itemID: 5
     itemName: "\u51DD\u81A0\u5F48"
     exchangeItemID: 1004
     exchangeItemQuantity: 6
-    quantityText: {fileID: 0}
   - itemID: 6
     itemName: "\u71C3\u71D2\u5F48"
     exchangeItemID: 1005
     exchangeItemQuantity: 6
-    quantityText: {fileID: 0}
   playerInventory:
-    playerItems:
-    - itemID: 1001
-      itemName: "\u9152\u74F6"
-      quantity: 6
-    - itemID: 1002
-      itemName: "\u8089"
-      quantity: 6
-    - itemID: 1003
-      itemName: "\u7259"
-      quantity: 6
-    - itemID: 1004
-      itemName: "\u51DD\u81A0"
-      quantity: 6
-    - itemID: 1005
-      itemName: "\u9AA8\u982D"
-      quantity: 6
-    - itemID: 1006
-      itemName: "\u9152\u74F6"
-      quantity: 6
+    playerItems: []
   coinsTxt: {fileID: 589551020}
 --- !u!4 &1688615745
 Transform:
@@ -51459,15 +51435,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1688615744}
-        m_TargetAssemblyTypeName: Justin.Buttoninfo, Assembly-CSharp
+        m_TargetAssemblyTypeName: Buttoninfo, Assembly-CSharp
         m_MethodName: BuyCurrentItem
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\u7528\u4E00\u500B\u9152\u74F6\u63DB\u7A7A\u74F6"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2012209310
