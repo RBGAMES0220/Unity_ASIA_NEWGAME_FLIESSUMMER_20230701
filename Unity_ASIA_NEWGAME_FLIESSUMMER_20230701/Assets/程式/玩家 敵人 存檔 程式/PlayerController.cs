@@ -27,7 +27,7 @@ namespace GLORY
         private int comboCount = 0;
         private float lastAttackTime;
         public float comboTimeThreshold = 0.5f;
-
+        private AudioSource[] audioSources;
 
         private Rigidbody2D rb; // Rigidbody2D組件
         private int jumpCount = 0; // 當前跳躍次數
@@ -44,8 +44,21 @@ namespace GLORY
             playerHealth = GetComponent<PlayerHealth>(); // 取得PlayerHealth組件
             anim = GetComponent<Animator>(); // 取得Animator組件
             integer = 50;
+            // 获取所有的AudioSource组件
+            audioSources = GetComponents<AudioSource>();
         }
 
+        void OnDestroy()
+        {
+            // 停止播放所有音频
+            if (audioSources != null)
+            {
+                foreach (var audioSource in audioSources)
+                {
+                    audioSource.Stop();
+                }
+            }
+        }
         // 獲取左右移動輸入和跳躍輸入
         private void Update()
         {
