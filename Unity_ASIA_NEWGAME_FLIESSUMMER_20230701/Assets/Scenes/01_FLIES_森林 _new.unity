@@ -2223,7 +2223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.80367, y: -1.0345955, z: -10}
+  m_LocalPosition: {x: -30.824682, y: -1.0346785, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2914,8 +2914,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685399437}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.1557, y: -9.086543, z: 63.75764}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -48.1557, y: -9.086548, z: 63.75764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3598,7 +3598,7 @@ GameObject:
   - component: {fileID: 785591488}
   - component: {fileID: 785591489}
   m_Layer: 0
-  m_Name: "\u80CC\u666F"
+  m_Name: "\u7B2C\u4E00\u95DC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7008,6 +7008,7 @@ GameObject:
   - component: {fileID: 1077495999}
   - component: {fileID: 1077496000}
   - component: {fileID: 314906599}
+  - component: {fileID: 1077496001}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -7023,7 +7024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077495997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.785, y: -12.8768, z: -10}
+  m_LocalPosition: {x: -30.80601, y: -12.8768, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7086,6 +7087,22 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 785591489}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &1077496001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077495997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1d434cc76f6ac4892e10f7f720707a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namesConfiner:
+  - "\u7B2C\u4E00\u95DC"
+  - "\u7926\u5751\u80CC\u666F"
+  - "\u7B2C\u4E09\u95DC"
 --- !u!1 &1097785940
 GameObject:
   m_ObjectHideFlags: 0
@@ -9567,6 +9584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6718b025d9d556c45889b58946cf3402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievements: []
   enemySlayerAchieved: 0
   integer: 0
   floting_point: 0
@@ -36297,39 +36315,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4936657586905684352, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 12.5504
+      value: 1.6965
       objectReference: {fileID: 0}
     - target: {fileID: 4936657586905684352, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 6.2751
+      value: 0.8482971
       objectReference: {fileID: 0}
-    - target: {fileID: 4936657586962773289, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 922d8dced6dea9448ac504a4b307ee49, type: 3}
     - target: {fileID: 4936657586962773334, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936657587038378761, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
-      propertyPath: m_Value
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936657587038378806, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 292.0427
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936657587038378806, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 41.6241
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936657587038378806, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 323
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 4936657587038378806, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -110
+      value: -68
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc90476d8310df45971c8d76811b68e, type: 3}

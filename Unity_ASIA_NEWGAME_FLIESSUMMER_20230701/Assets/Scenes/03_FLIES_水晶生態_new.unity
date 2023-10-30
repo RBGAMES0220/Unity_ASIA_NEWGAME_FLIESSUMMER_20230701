@@ -1347,7 +1347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454500, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2116513231743454501, guid: f82bfb7617d1ae04a9f7b8691ebca842, type: 3}
       propertyPath: initialSkinName
@@ -9590,7 +9590,7 @@ GameObject:
   - component: {fileID: 697692015}
   - component: {fileID: 697692016}
   m_Layer: 0
-  m_Name: background
+  m_Name: "\u7B2C\u4E09\u95DC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57636,7 +57636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1153085038
 AudioListener:
   m_ObjectHideFlags: 0

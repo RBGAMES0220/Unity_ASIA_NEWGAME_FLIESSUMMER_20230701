@@ -77,6 +77,8 @@ namespace GLORY
 
         private void Die()
         {
+            FindObjectOfType<AchievementManager>().enemySlayerAchieved = true;
+
             isDead = true;
             // 敵人死亡的處理邏輯
             Debug.Log("Enemy died!");

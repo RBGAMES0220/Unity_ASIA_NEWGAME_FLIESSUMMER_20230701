@@ -36,8 +36,8 @@ public class AchievementManager : MonoBehaviour
 
     private void InitializeAchievements()
     {
-        if (achievements != null)
-            return;
+        //if (achievements != null)
+            //return;
 
         achievements = new List<Achievement>();
         achievements.Add(new Achievement("Step By Step", "設定你的整數為100或以上", (object o) => integer >= 100));
@@ -65,6 +65,7 @@ public class AchievementManager : MonoBehaviour
     }
 }
 
+[System.Serializable]
 public class Achievement
 {
     public string title; // 成就標題
