@@ -21,3 +21,10 @@ MonoBehaviour:
 
 '
   equip: 1
+  isUsable: 0
+  isCraftable: 0
+  craftingRecipe:
+    ingredient1: {fileID: 0}
+    ingredient2: {fileID: 0}
+    ingredient3: {fileID: 0}
+    result: {fileID: 0}

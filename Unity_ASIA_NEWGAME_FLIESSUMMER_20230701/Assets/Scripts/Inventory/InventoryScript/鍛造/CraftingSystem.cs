@@ -1,56 +1,105 @@
-﻿using System.Collections;
+﻿using GLORY;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using GLORY;
 
-namespace GLORY
+public class CraftingSystem : MonoBehaviour
 {
-    public class CraftingSystem : MonoBehaviour
+    public Inventory playerInventory; // 玩家的背包
+    public List<CraftingRecipe> craftingRecipes;
+}// 可用的合成规则
+
+   /* public void CraftItem(Item item1, Item item2, Item item3)
     {
-        public Inventory playerInventory; // 玩家的背包
-        public List<CraftingRecipe> craftingRecipes; // 可用的合成規則
+        CraftingRecipe matchingRecipe = GetMatchingRecipe(item1, item2, item3);
 
-        // 玩家嘗試合成物品
-        public void CraftItem(Item item1, Item item2)
+        if (matchingRecipe != null)
         {
-            // 檢查是否存在匹配的合成規則
-            CraftingRecipe matchingRecipe = GetMatchingRecipe(item1, item2);
-
-            if (matchingRecipe != null)
+            if (CheckInventoryForMaterials(matchingRecipe, item1, item2, item3))
             {
-                // 檢查玩家是否擁有足夠的原材料
-                if (playerInventory.itemList.Contains(item1) && playerInventory.itemList.Contains(item2))
-                {
-                    // 從背包中移除原材料
-                    playerInventory.itemList.Remove(item1);
-                    playerInventory.itemList.Remove(item2);
+                RemoveMaterialsFromInventory(item1, item2, item3);
 
-                    // 將合成結果添加到背包中
-                    playerInventory.itemList.Add(matchingRecipe.result);
+                PerformCrafting(matchingRecipe);
 
-                    // 更新 UI 以反映背包中的變化
-                    InventoryManager.RefreshItem();
-                }
+                UpdateUI();
             }
             else
             {
-                // 顯示無法合成的提示或錯誤信息
+                Debug.Log("玩家没有足够的原材料。");
             }
         }
-
-        // 查找匹配的合成規則
-        private CraftingRecipe GetMatchingRecipe(Item item1, Item item2)
+        else
         {
-            foreach (CraftingRecipe recipe in craftingRecipes)
-            {
-                if ((recipe.ingredient1 == item1 && recipe.ingredient2 == item2) ||
-                    (recipe.ingredient1 == item2 && recipe.ingredient2 == item1))
-                {
-                    return recipe;
-                }
-            }
-
-            return null; // 找不到匹配的合成規則
+            Debug.Log("无法合成这些物品。");
         }
     }
+
+    private CraftingRecipe GetMatchingRecipe(Item item1, Item item2, Item item3)
+    {
+        foreach (CraftingRecipe recipe in craftingRecipes)
+        {
+            // 检查是否有匹配的合成规则
+            if (recipe.ingredient1 == item1 && recipe.ingredient2 == item2 && recipe.ingredient3 == item3)
+            {
+                return recipe;
+            }
+            else if (recipe.ingredient1 == item2 && recipe.ingredient2 == item1 && recipe.ingredient3 == item3)
+            {
+                return recipe;
+            }
+            // 添加其他可能的匹配条件
+        }
+
+        return null; // 如果没有找到匹配的合成规则
+    }
 }
+
+   /* private bool CheckInventoryForMaterials(CraftingRecipe recipe, Item item1, Item item2, Item item3)
+    {
+        // 检查玩家是否拥有足够的原材料
+        if (item3 == null)
+        {
+            return playerInventory.Contains(item1) && playerInventory.Contains(item2);
+        }
+        else
+        {
+            return playerInventory.Contains(item1) && playerInventory.Contains(item2) && playerInventory.Contains(item3);
+        }
+    }
+
+    private void RemoveMaterialsFromInventory(Item item1, Item item2, Item item3)
+    {
+        // 从背包中移除原材料
+        playerInventory.RemoveItem(item1);
+        playerInventory.RemoveItem(item2);
+
+        if (item3 != null)
+        {
+            playerInventory.RemoveItem(item3);
+        }
+    }
+
+    private void PerformCrafting(CraftingRecipe recipe)
+    {
+        // 根据合成结果的类型执行不同的操作
+        switch (recipe.result)
+        {
+            case HealthPotion _:
+                playerInventory.AddItem(new HealthPotion()); // 假设 HealthPotion 是一个合成的结果类型
+                break;
+            case Firebomb _:
+                playerInventory.AddItem(new Firebomb());
+                break;
+            case GelBomb _:
+                playerInventory.AddItem(new GelBomb());
+                break;
+                // 添加其他合成结果的处理
+        }
+    }
+
+    private void UpdateUI()
+    {
+        // 在这里更新你的UI，例如刷新玩家背包的显示
+        // 你可以使用Unity的UI系统或其他UI框架来实现这一点
+    }
+}*/

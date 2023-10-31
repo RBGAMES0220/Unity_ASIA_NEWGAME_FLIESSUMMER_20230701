@@ -9,4 +9,5 @@ namespace GLORY
     {
         public List<Item> itemList = new List<Item>();
     }
+
 }
