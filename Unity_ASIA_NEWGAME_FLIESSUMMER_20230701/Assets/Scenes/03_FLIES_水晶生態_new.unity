@@ -16758,6 +16758,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1950900959}
+    - target: {fileID: 4872621827162815805, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 7060186708397295156, guid: 046b1c11becc68d418bea917350af497, type: 3}
     - target: {fileID: 4872621827162815806, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -17233,6 +17237,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1950900959}
+    - target: {fileID: 4872621827162815805, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 7060186708397295156, guid: 046b1c11becc68d418bea917350af497, type: 3}
     - target: {fileID: 4872621827162815806, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -17384,6 +17392,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1950900959}
+    - target: {fileID: 976508625284261376, guid: 16bfa4c2cc742d941876d59c8f3e5407, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 7103667456958285601, guid: 4edc681efd34ad947802d437cf7b72bf, type: 3}
     - target: {fileID: 976508625284261377, guid: 16bfa4c2cc742d941876d59c8f3e5407, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -17731,6 +17743,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1950900959}
+    - target: {fileID: 4872621827162815805, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 7060186708397295156, guid: 046b1c11becc68d418bea917350af497, type: 3}
     - target: {fileID: 4872621827162815806, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -67211,6 +67227,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1950900959}
+    - target: {fileID: 976508625284261376, guid: 16bfa4c2cc742d941876d59c8f3e5407, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 7103667456958285601, guid: 4edc681efd34ad947802d437cf7b72bf, type: 3}
     - target: {fileID: 976508625284261377, guid: 16bfa4c2cc742d941876d59c8f3e5407, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -67397,6 +67417,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1950900959}
+    - target: {fileID: 4872621827162815805, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 7060186708397295156, guid: 046b1c11becc68d418bea917350af497, type: 3}
     - target: {fileID: 4872621827162815806, guid: 4d6205488fce0de4989eb260b314c00e, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -67482,6 +67506,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1950900959}
+    - target: {fileID: 5461960199938172726, guid: 0406c47e11257684da6e02df1e8d7c2b, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 5047321266307550217, guid: e9fa31aa04d186e4fb1fa3387ca70df1, type: 3}
     - target: {fileID: 5461960199938172735, guid: 0406c47e11257684da6e02df1e8d7c2b, type: 3}
       propertyPath: m_Name
       value: "\u9AB8\u9AA8\u9B5A"
@@ -67499,6 +67527,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 1950900959}
+    - target: {fileID: 8856293507232310210, guid: 9808e706f26569645a3fa5789738b541, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 7103667456958285601, guid: 4edc681efd34ad947802d437cf7b72bf, type: 3}
     - target: {fileID: 8856293507232310211, guid: 9808e706f26569645a3fa5789738b541, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
