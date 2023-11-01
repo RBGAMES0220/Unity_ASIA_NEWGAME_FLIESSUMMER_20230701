@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Map
+  - "\u901A\u95DC"
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Enemy
   - "\u6575\u4EBA\u767C\u5C04\u7269"
   - "\u9053\u5177"
-  - 
-  - 
+  - "\u901A\u95DC"
+  - WinLayer
   - 
   - 
   - 

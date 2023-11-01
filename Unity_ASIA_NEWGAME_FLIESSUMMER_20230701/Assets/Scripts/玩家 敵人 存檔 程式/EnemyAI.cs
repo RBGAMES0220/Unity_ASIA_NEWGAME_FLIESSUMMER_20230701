@@ -100,6 +100,7 @@ namespace GLORY
 
         private void Chase()
         {
+            if (target == null) return;
             // 判斷是否超出偵測範圍
             if (Vector3.Distance(transform.position, target.position) > detectionRadius)
             {
