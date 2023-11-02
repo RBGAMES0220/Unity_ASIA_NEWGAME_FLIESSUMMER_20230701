@@ -2717,7 +2717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.239555, y: -0.8980665, z: -10}
+  m_LocalPosition: {x: -30.204332, y: -0.88849545, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7761,7 +7761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namesConfiner:
   - "\u7B2C\u4E00\u95DC"
-  - "\u7926\u5751\u80CC\u666F"
+  - "\u7B2C\u4E8C\u95DC"
   - "\u7B2C\u4E09\u95DC"
 --- !u!1 &1097785940
 GameObject:
