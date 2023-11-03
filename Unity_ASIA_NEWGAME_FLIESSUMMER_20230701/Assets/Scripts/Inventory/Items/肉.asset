@@ -17,9 +17,7 @@ MonoBehaviour:
   itemName: Meet
   itemImage: {fileID: 21300000, guid: 3f015b61ab6d5364c9361edac01b6f10, type: 3}
   itemHeld: 6
-  itemInfo: 'This is a Meet
-
-'
+  itemInfo: "\u8089\n"
   equip: 1
   isUsable: 0
   isCraftable: 0

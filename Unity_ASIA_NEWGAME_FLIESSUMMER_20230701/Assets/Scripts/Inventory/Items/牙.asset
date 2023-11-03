@@ -17,7 +17,7 @@ MonoBehaviour:
   itemName: "\u7259"
   itemImage: {fileID: 21300000, guid: 4ac7fd7ca343ad347b63b6c2f9efc815, type: 3}
   itemHeld: 3
-  itemInfo: This is a tooth
+  itemInfo: "\u7259\n"
   equip: 1
   isUsable: 0
   isCraftable: 0

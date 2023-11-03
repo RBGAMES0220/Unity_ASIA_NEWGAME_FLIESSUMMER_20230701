@@ -17,11 +17,12 @@ MonoBehaviour:
   itemName: "\u51DD\u81A0\u5F48"
   itemImage: {fileID: 21300000, guid: dbac4d89bd5d78747a4ddb66cc9c09de, type: 3}
   itemHeld: 0
-  itemInfo: "This is a \rgel bomb"
+  itemInfo: "\u51DD\u81A0\u5F48"
   equip: 1
   isUsable: 0
   isCraftable: 0
   craftingRecipe:
     ingredient1: {fileID: 0}
     ingredient2: {fileID: 0}
+    ingredient3: {fileID: 0}
     result: {fileID: 0}

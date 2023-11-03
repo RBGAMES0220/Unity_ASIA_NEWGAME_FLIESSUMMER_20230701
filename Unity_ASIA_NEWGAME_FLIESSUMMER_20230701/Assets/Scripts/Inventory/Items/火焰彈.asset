@@ -17,7 +17,7 @@ MonoBehaviour:
   itemName: "\u706B\u7130\u5F48"
   itemImage: {fileID: 21300000, guid: 8f78332b87c148643a2b4a8edc1a1920, type: 3}
   itemHeld: 3
-  itemInfo: This is a firebomb
+  itemInfo: "\u706B\u7130\u5F48"
   equip: 1
   isUsable: 0
   isCraftable: 0
