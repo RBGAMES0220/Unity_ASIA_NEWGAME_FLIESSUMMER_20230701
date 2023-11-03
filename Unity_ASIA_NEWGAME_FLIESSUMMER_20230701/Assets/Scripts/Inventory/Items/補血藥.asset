@@ -16,7 +16,7 @@ MonoBehaviour:
   value: 0
   itemName: REDPOTION
   itemImage: {fileID: 21300000, guid: a543b36893ccfa0489c9206aa1a104ea, type: 3}
-  itemHeld: 3
+  itemHeld: 1
   itemInfo: "\u88DC\u8840\u85E5\n"
   equip: 1
   isUsable: 0

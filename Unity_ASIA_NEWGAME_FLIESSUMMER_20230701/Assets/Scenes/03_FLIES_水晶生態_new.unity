@@ -1381,7 +1381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &84262152
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,7 +2514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &187029496
 GameObject:
   m_ObjectHideFlags: 0
@@ -6183,7 +6183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &527848442
 GameObject:
   m_ObjectHideFlags: 0
@@ -6453,7 +6453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &562031953
 GameObject:
   m_ObjectHideFlags: 0
@@ -19245,7 +19245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1001 &875355676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19751,7 +19751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &927291239
 GameObject:
   m_ObjectHideFlags: 0
@@ -19877,7 +19877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &936975438
 GameObject:
   m_ObjectHideFlags: 0
@@ -20052,7 +20052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &964807537
 GameObject:
   m_ObjectHideFlags: 0
@@ -58973,7 +58973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1001 &1100305105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59156,7 +59156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &1108027541
 GameObject:
   m_ObjectHideFlags: 0
@@ -61545,7 +61545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &1246269174
 GameObject:
   m_ObjectHideFlags: 0
@@ -62596,7 +62596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &1326828046
 GameObject:
   m_ObjectHideFlags: 0
@@ -63085,7 +63085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &1469351180
 GameObject:
   m_ObjectHideFlags: 0
@@ -66231,7 +66231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &1607552750
 GameObject:
   m_ObjectHideFlags: 0
@@ -67762,7 +67762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &1685497065
 GameObject:
   m_ObjectHideFlags: 0
@@ -68107,7 +68107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &1738737887
 GameObject:
   m_ObjectHideFlags: 0
@@ -70466,7 +70466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1001 &1950900957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71193,7 +71193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  damageInterval: 0.1
+  damageInterval: 0.5
 --- !u!1 &2098742305
 GameObject:
   m_ObjectHideFlags: 0

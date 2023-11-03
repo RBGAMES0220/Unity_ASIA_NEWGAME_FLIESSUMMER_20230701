@@ -2717,7 +2717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.121176, y: -0.89138794, z: -10}
+  m_LocalPosition: {x: -33.21357, y: -0.8979845, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8033,7 +8033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1108315804
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36381,6 +36381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u8089"
       objectReference: {fileID: 0}
+    - target: {fileID: 14972643867760962, guid: fb75490aae8abcb49ac5776171499fc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 14972643867760966, guid: fb75490aae8abcb49ac5776171499fc3, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -36486,6 +36490,10 @@ PrefabInstance:
     - target: {fileID: 494436757824493389, guid: 3dee1341ed78ed741ac7092519f88ada, type: 3}
       propertyPath: m_Name
       value: "\u8611\u83C7"
+      objectReference: {fileID: 0}
+    - target: {fileID: 494436757824493389, guid: 3dee1341ed78ed741ac7092519f88ada, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dee1341ed78ed741ac7092519f88ada, type: 3}
