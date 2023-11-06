@@ -15,6 +15,7 @@ public class ConfinerSystem : MonoBehaviour
     {
         cinemachineConfiner = GetComponent<CinemachineConfiner>();
         SceneManager.activeSceneChanged += OnSceneChanged;
+        FindConfiner(SceneManager.GetActiveScene().name);
     }
 
     /// <summary>
@@ -26,7 +27,16 @@ public class ConfinerSystem : MonoBehaviour
     /// <param name="arg1"></param>
     private void OnSceneChanged(Scene arg0, Scene arg1)
     {
-        switch (arg1.name)
+        FindConfiner(arg1.name);
+    }
+
+    /// <summary>
+    /// ´M§ä½d³òª«¥ó
+    /// </summary>
+    /// <param name="nameScene"></param>
+    private void FindConfiner(string nameScene)
+    {
+        switch (nameScene)
         {
             case "01_FLIES_´ËªL _new":
                 cofiner = GameObject.Find(namesConfiner[0]).GetComponent<Collider2D>();
