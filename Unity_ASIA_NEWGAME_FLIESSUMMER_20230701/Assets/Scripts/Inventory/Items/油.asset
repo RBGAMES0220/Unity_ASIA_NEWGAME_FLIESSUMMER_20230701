@@ -16,13 +16,6 @@ MonoBehaviour:
   value: 0
   itemName: "\u6CB9"
   itemImage: {fileID: 21300000, guid: a1159085cd5aae147ba908f4b5f0ff5b, type: 3}
-  itemHeld: 2
+  itemHeld: 1
   itemInfo: "\u6CB9"
   equip: 1
-  isUsable: 0
-  isCraftable: 0
-  craftingRecipe:
-    ingredient1: {fileID: 0}
-    ingredient2: {fileID: 0}
-    ingredient3: {fileID: 0}
-    result: {fileID: 0}
