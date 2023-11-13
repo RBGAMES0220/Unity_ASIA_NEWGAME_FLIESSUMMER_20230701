@@ -72,6 +72,21 @@ namespace GLORY
             }
         }
 
+        private void Awake()
+        {
+            for (int i = 0; i < craftInputs.Count; i++)
+            {
+                int index = i;
+                craftInputs[i].onValueChange.AddListener(UpdateInputFieldString);
+            }
+        }
+
+        private void UpdateInputFieldString(string getInput)
+        {
+            currentCraftID += getInput;
+            Craft();
+        }
+
         // 遊戲啟動時執行的方法
         void Start()
         {
@@ -83,16 +98,16 @@ namespace GLORY
         // 遊戲每一幀更新時執行的方法
         void Update()
         {
-            if (isCrafting)
-            {
-                Craft();
-            }
+            //if (isCrafting)
+            //{
+            //    Craft();
+            //}
         }
 
         // 執行合成的方法
         void Craft()
         {
-            currentCraftID = "";
+            // currentCraftID = "";
 
             // 使用迴圈處理所有的 craftInputs
             for (int i = 0; i < craftInputs.Count; i++)
@@ -102,7 +117,7 @@ namespace GLORY
                 {
                     if (craftInputs[i].text != "")
                     {
-                        currentCraftID += craftInputs[i].text;
+                        // currentCraftID += craftInputs[i].text;
 
                         // 檢查 cratImages 列表的索引是否在範圍內
                         if (i < cratImages.Count)
@@ -116,7 +131,7 @@ namespace GLORY
                     }
                     else
                     {
-                        currentCraftID += "";
+                        // currentCraftID += "";
                         cratImages[i].sprite = emptySlot;
                     }
                 }
